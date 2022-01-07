@@ -1,0 +1,455 @@
+{
+  "$type": "OpenBots.Core.Script.Script, OpenBots.Core",
+  "Commands": [
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.SecureData.NewSecureStringCommand, OpenBots.Commands.Core",
+        "v_Input": "\"November@135\"",
+        "v_OutputUserVariableName": "MailPassword",
+        "Encrypted": false,
+        "CommandID": "70f3978f-912b-4485-b37c-b5e96c0ca5a8",
+        "CommandName": "NewSecureStringCommand",
+        "SelectionName": "New SecureString",
+        "LineNumber": 1,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.SystemAutomation.Email.GetIMAPEmailsCommand, OpenBots.Commands.SystemAutomation",
+        "v_IMAPHost": "\"imap.gmail.com\"",
+        "v_IMAPPort": "\"993\"",
+        "v_IMAPUserName": "\"robotokcorporatepune@gmail.com\"",
+        "v_IMAPPassword": "MailPassword",
+        "v_IMAPSourceFolder": "\"INBOX\"",
+        "v_IMAPFilter": "\"None\"",
+        "v_IMAPGetUnreadOnly": "Yes",
+        "v_IMAPMarkAsRead": "No",
+        "v_IMAPSaveMessagesAndAttachments": "No",
+        "v_IncludeEmbeddedImagesAsAttachments": "No",
+        "v_IMAPMessageDirectory": null,
+        "v_IMAPAttachmentDirectory": null,
+        "v_OutputUserVariableName": "MailMessage",
+        "CommandID": "56c3d320-0922-48af-8f9f-cbab3af5943d",
+        "CommandName": "GetIMAPEmailsCommand",
+        "SelectionName": "Get IMAP Emails",
+        "LineNumber": 2,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.Misc.ShowMessageCommand, OpenBots.Commands.Core",
+        "v_Message": "MailMessage.Count.ToString()",
+        "v_AutoCloseAfter": "0",
+        "CommandID": "1f55338a-bc15-4900-b048-599046eb822f",
+        "CommandName": "ShowMessageCommand",
+        "SelectionName": "Show Message",
+        "LineNumber": 3,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.Loop.BeginForEachCommand, OpenBots.Commands.Core",
+        "v_LoopParameter": "MailMessage",
+        "v_OutputUserVariableName": "MailItem",
+        "CommandID": "98c9b312-dc1f-4803-ba1f-58f5bbfd7dc5",
+        "CommandName": "BeginForEachCommand",
+        "SelectionName": "For Each",
+        "LineNumber": 4,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": true,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": [
+        {
+          "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+          "ScriptCommand": {
+            "$type": "OpenBots.Commands.Core.Misc.AddCodeCommentCommand, OpenBots.Commands.Core",
+            "CommandID": "4ef4c146-bc91-4d5d-a87a-05c4faf09061",
+            "CommandName": "AddCodeCommentCommand",
+            "SelectionName": "Add Code Comment",
+            "LineNumber": 5,
+            "IsCommented": false,
+            "PauseBeforeExecution": false,
+            "CommandEnabled": true,
+            "ScopeStartCommand": false,
+            "v_IsPrivate": false,
+            "v_ErrorHandling": "None",
+            "v_Comment": "Items in this section will run within the loop"
+          },
+          "AdditionalScriptCommands": null
+        },
+        {
+          "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+          "ScriptCommand": {
+            "$type": "OpenBots.Commands.SystemAutomation.Email.GetIMAPEmailAttachmentsCommand, OpenBots.Commands.SystemAutomation",
+            "v_IMAPMimeMessage": "MailItem",
+            "v_IMAPAttachmentDirectory": "ProjectPath",
+            "v_IncludeEmbeddedImagesAsAttachments": "No",
+            "v_OutputUserVariableName": "Attachments",
+            "CommandID": "bdcc2fba-c8d7-4a7e-b20f-f8dd40502f85",
+            "CommandName": "GetIMAPEmailAttachmentsCommand",
+            "SelectionName": "Get IMAP Email Attachments",
+            "LineNumber": 6,
+            "IsCommented": false,
+            "PauseBeforeExecution": false,
+            "CommandEnabled": true,
+            "ScopeStartCommand": false,
+            "v_IsPrivate": false,
+            "v_ErrorHandling": "None",
+            "v_Comment": null
+          },
+          "AdditionalScriptCommands": null
+        },
+        {
+          "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+          "ScriptCommand": {
+            "$type": "OpenBots.Commands.Core.If.BeginIfCommand, OpenBots.Commands.Core",
+            "v_Option": "Inline",
+            "v_Condition": "Attachments.Count>0",
+            "v_ActionType": null,
+            "v_ActionParameterTable": [],
+            "CommandID": "8e51214d-8378-4731-8d3f-9c3ace19581f",
+            "CommandName": "BeginIfCommand",
+            "SelectionName": "If",
+            "LineNumber": 7,
+            "IsCommented": false,
+            "PauseBeforeExecution": false,
+            "CommandEnabled": true,
+            "ScopeStartCommand": true,
+            "v_IsPrivate": false,
+            "v_ErrorHandling": "None",
+            "v_Comment": null
+          },
+          "AdditionalScriptCommands": [
+            {
+              "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+              "ScriptCommand": {
+                "$type": "OpenBots.Commands.Core.Misc.AddCodeCommentCommand, OpenBots.Commands.Core",
+                "CommandID": "1935be2b-3432-45e5-be43-27845aa03053",
+                "CommandName": "AddCodeCommentCommand",
+                "SelectionName": "Add Code Comment",
+                "LineNumber": 8,
+                "IsCommented": false,
+                "PauseBeforeExecution": false,
+                "CommandEnabled": true,
+                "ScopeStartCommand": false,
+                "v_IsPrivate": false,
+                "v_ErrorHandling": "None",
+                "v_Comment": "Items in this section will run if the statement is true"
+              },
+              "AdditionalScriptCommands": null
+            },
+            {
+              "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+              "ScriptCommand": {
+                "$type": "OpenBots.Commands.Core.Misc.ShowMessageCommand, OpenBots.Commands.Core",
+                "v_Message": "Attachments.Count().ToString()",
+                "v_AutoCloseAfter": "0",
+                "CommandID": "e7e4448c-08af-4336-af7c-5c1c610c8768",
+                "CommandName": "ShowMessageCommand",
+                "SelectionName": "Show Message",
+                "LineNumber": 9,
+                "IsCommented": false,
+                "PauseBeforeExecution": false,
+                "CommandEnabled": true,
+                "ScopeStartCommand": false,
+                "v_IsPrivate": false,
+                "v_ErrorHandling": "None",
+                "v_Comment": null
+              },
+              "AdditionalScriptCommands": null
+            },
+            {
+              "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+              "ScriptCommand": {
+                "$type": "OpenBots.Commands.Core.Loop.BeginForEachCommand, OpenBots.Commands.Core",
+                "v_LoopParameter": "Attachments",
+                "v_OutputUserVariableName": "AttachmentItems",
+                "CommandID": "969dc2e0-3ec7-4298-af37-fd99ff8ffff9",
+                "CommandName": "BeginForEachCommand",
+                "SelectionName": "For Each",
+                "LineNumber": 10,
+                "IsCommented": false,
+                "PauseBeforeExecution": false,
+                "CommandEnabled": true,
+                "ScopeStartCommand": true,
+                "v_IsPrivate": false,
+                "v_ErrorHandling": "None",
+                "v_Comment": null
+              },
+              "AdditionalScriptCommands": [
+                {
+                  "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+                  "ScriptCommand": {
+                    "$type": "OpenBots.Commands.Core.Misc.AddCodeCommentCommand, OpenBots.Commands.Core",
+                    "CommandID": "cf998496-1702-4b33-a6a1-4152083d4997",
+                    "CommandName": "AddCodeCommentCommand",
+                    "SelectionName": "Add Code Comment",
+                    "LineNumber": 11,
+                    "IsCommented": false,
+                    "PauseBeforeExecution": false,
+                    "CommandEnabled": true,
+                    "ScopeStartCommand": false,
+                    "v_IsPrivate": false,
+                    "v_ErrorHandling": "None",
+                    "v_Comment": "Items in this section will run within the loop"
+                  },
+                  "AdditionalScriptCommands": null
+                },
+                {
+                  "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+                  "ScriptCommand": {
+                    "$type": "OpenBots.Commands.Core.Misc.ShowMessageCommand, OpenBots.Commands.Core",
+                    "v_Message": "AttachmentItems",
+                    "v_AutoCloseAfter": "0",
+                    "CommandID": "4b140f5c-f4c4-449b-9e0c-2274bd4904cb",
+                    "CommandName": "ShowMessageCommand",
+                    "SelectionName": "Show Message",
+                    "LineNumber": 12,
+                    "IsCommented": false,
+                    "PauseBeforeExecution": false,
+                    "CommandEnabled": true,
+                    "ScopeStartCommand": false,
+                    "v_IsPrivate": false,
+                    "v_ErrorHandling": "None",
+                    "v_Comment": null
+                  },
+                  "AdditionalScriptCommands": null
+                },
+                {
+                  "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+                  "ScriptCommand": {
+                    "$type": "OpenBots.Commands.Core.Loop.EndLoopCommand, OpenBots.Commands.Core",
+                    "LoopType": "For Each",
+                    "CommandID": "b92c6bcb-0f39-4d06-b5e6-405b4aecb75d",
+                    "CommandName": "EndLoopCommand",
+                    "SelectionName": "End Loop",
+                    "LineNumber": 13,
+                    "IsCommented": false,
+                    "PauseBeforeExecution": false,
+                    "CommandEnabled": true,
+                    "ScopeStartCommand": false,
+                    "v_IsPrivate": false,
+                    "v_ErrorHandling": "None",
+                    "v_Comment": null
+                  },
+                  "AdditionalScriptCommands": null
+                }
+              ]
+            },
+            {
+              "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+              "ScriptCommand": {
+                "$type": "OpenBots.Commands.Core.If.EndIfCommand, OpenBots.Commands.Core",
+                "IfType": "If",
+                "CommandID": "0143e4ca-fe43-4ce5-8bc4-37aefa62eedb",
+                "CommandName": "EndIfCommand",
+                "SelectionName": "End If",
+                "LineNumber": 14,
+                "IsCommented": false,
+                "PauseBeforeExecution": false,
+                "CommandEnabled": true,
+                "ScopeStartCommand": false,
+                "v_IsPrivate": false,
+                "v_ErrorHandling": "None",
+                "v_Comment": null
+              },
+              "AdditionalScriptCommands": null
+            }
+          ]
+        },
+        {
+          "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+          "ScriptCommand": {
+            "$type": "OpenBots.Commands.Core.Loop.EndLoopCommand, OpenBots.Commands.Core",
+            "LoopType": "For Each",
+            "CommandID": "245da23a-a7d9-4991-943d-95b2a898bdcc",
+            "CommandName": "EndLoopCommand",
+            "SelectionName": "End Loop",
+            "LineNumber": 15,
+            "IsCommented": false,
+            "PauseBeforeExecution": false,
+            "CommandEnabled": true,
+            "ScopeStartCommand": false,
+            "v_IsPrivate": false,
+            "v_ErrorHandling": "None",
+            "v_Comment": null
+          },
+          "AdditionalScriptCommands": null
+        }
+      ]
+    }
+  ],
+  "Variables": [
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "AttachmentItems",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "Attachments",
+      "VariableType": "System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "MailItem",
+      "VariableType": "MimeKit.MimeMessage, MimeKit, Version=2.14.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "MailMessage",
+      "VariableType": "System.Collections.Generic.List`1[[MimeKit.MimeMessage, MimeKit, Version=2.14.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "MailPassword",
+      "VariableType": "System.Security.SecureString, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "ProjectPath",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": "\"Value Provided at Runtime\""
+    }
+  ],
+  "Arguments": [],
+  "Elements": [],
+  "ImportedNamespaces": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.List`1[[OpenBots.Core.Script.AssemblyReference, OpenBots.Core]], mscorlib]], mscorlib",
+    "Microsoft.Office.Interop.Outlook": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "Microsoft.Office.Interop.Outlook",
+        "AssemblyVersion": "15.0.0.0"
+      }
+    ],
+    "MimeKit": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "MimeKit",
+        "AssemblyVersion": "2.14.0.0"
+      }
+    ],
+    "OpenBots.Core.Model.ApplicationModel": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "OpenBots.Core",
+        "AssemblyVersion": "1.6.1.0"
+      }
+    ],
+    "System": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Collections.Generic": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Data": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Data",
+        "AssemblyVersion": "4.0.0.0"
+      },
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Data.DataSetExtensions",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Drawing": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Drawing",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Linq": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Core",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Security": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Text": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Text.RegularExpressions": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Threading.Tasks": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Windows.Forms": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Windows.Forms",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ]
+  },
+  "Version": "1.6.1.0"
+}

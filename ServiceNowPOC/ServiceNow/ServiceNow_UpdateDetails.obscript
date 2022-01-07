@@ -1,0 +1,263 @@
+{
+  "$type": "OpenBots.Core.Script.Script, OpenBots.Core",
+  "Commands": [
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.NativeBrowserAttachApplicationCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "BrowserInstance",
+        "v_EngineType": "Chrome",
+        "v_TabTitle": "\"Incidents | Module | ServiceNow\"",
+        "v_Timeout": "30",
+        "CommandID": "e2d1ce4c-aadf-4f99-9edd-0254f6f2e96e",
+        "CommandName": "NativeBrowserAttachApplicationCommand",
+        "SelectionName": "Native Browser Attach Application",
+        "LineNumber": 1,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserSetTextCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "BrowserInstance",
+        "v_NativeSearchParameters": [
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"XPath\"",
+            "Parameter Value": "\"/html/body/div[2]/form/span[1]/span/div[5]/div/div[1]/div[2]/div[2]/input\""
+          },
+          {
+            "Enabled": null,
+            "Parameter Name": "\"Relative XPath\"",
+            "Parameter Value": "\"//input[@id='sys_app_module.u_string_2']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"ID\"",
+            "Parameter Value": "\"sys_app_module.u_string_2\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Name\"",
+            "Parameter Value": "\"sys_app_module.u_string_2\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Tag Name\"",
+            "Parameter Value": "\"INPUT\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Class Name\"",
+            "Parameter Value": "\"form-control \""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Link Text\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector\"",
+            "Parameter Value": "\"input#sys_app_module\\2e u_string_2\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 1\"",
+            "Parameter Value": "\"INPUT[type='text']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 2\"",
+            "Parameter Value": "\"INPUT[data-type='string']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 3\"",
+            "Parameter Value": "\"INPUT[id='sys_app_module.u_string_2']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 4\"",
+            "Parameter Value": "\"INPUT[name='sys_app_module.u_string_2']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 5\"",
+            "Parameter Value": "\"INPUT[aria-required='false']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 6\"",
+            "Parameter Value": "\"INPUT[onchange='onChange('sys_app_module.u_string_2');']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 7\"",
+            "Parameter Value": "\"INPUT[maxlength='40']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 8\"",
+            "Parameter Value": "\"INPUT[autocomplete='off']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 9\"",
+            "Parameter Value": "\"INPUT[class='form-control ']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 10\"",
+            "Parameter Value": "\"INPUT[spellcheck='false']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 11\"",
+            "Parameter Value": "\"INPUT[aria-label='Company Type']\""
+          }
+        ],
+        "v_ClearOption": "Yes",
+        "v_SimulateType": "Yes",
+        "v_TextToSet": "\"Test\"",
+        "v_Timeout": "30",
+        "CommandID": "b71b2963-4c12-4e33-b15b-5ae49da6257a",
+        "CommandName": "NativeBrowserSetTextCommand",
+        "SelectionName": "Native Browser Set Text",
+        "LineNumber": 2,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    }
+  ],
+  "Variables": [
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "BrowserInstance",
+      "VariableType": "OpenBots.Core.Model.ApplicationModel.OBAppInstance, OpenBots.Core, Version=1.6.1.0, Culture=neutral, PublicKeyToken=null",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "ProjectPath",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": "\"Value Provided at Runtime\""
+    }
+  ],
+  "Arguments": [],
+  "Elements": [],
+  "ImportedNamespaces": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.List`1[[OpenBots.Core.Script.AssemblyReference, OpenBots.Core]], mscorlib]], mscorlib",
+    "Microsoft.Office.Interop.Outlook": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "Microsoft.Office.Interop.Outlook",
+        "AssemblyVersion": "15.0.0.0"
+      }
+    ],
+    "MimeKit": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "MimeKit",
+        "AssemblyVersion": "2.14.0.0"
+      }
+    ],
+    "OpenBots.Core.Model.ApplicationModel": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "OpenBots.Core",
+        "AssemblyVersion": "1.6.1.0"
+      }
+    ],
+    "System": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Collections.Generic": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Data": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Data",
+        "AssemblyVersion": "4.0.0.0"
+      },
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Data.DataSetExtensions",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Drawing": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Drawing",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Linq": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Core",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Security": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Text": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Text.RegularExpressions": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Threading.Tasks": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Windows.Forms": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Windows.Forms",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ]
+  },
+  "Version": "1.6.1.0"
+}

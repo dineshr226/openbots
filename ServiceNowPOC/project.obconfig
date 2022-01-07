@@ -1,0 +1,15 @@
+{
+  "ProjectID": "5a2b97e3-9a40-4c22-b995-abbefd03378c",
+  "ProjectName": "ServiceNowPOC",
+  "ProjectType": "OpenBots",
+  "Main": "Main.obscript",
+  "Version": "1.6.1.0",
+  "ProjectArguments": [],
+  "Dependencies": {
+    "OpenBots.Commands.Core": "1.6.1",
+    "OpenBots.Commands.DataManipulation": "1.6.1",
+    "OpenBots.Commands.Microsoft": "1.6.1",
+    "OpenBots.Commands.SystemAutomation": "1.6.1",
+    "OpenBots.Commands.UIAutomation": "1.6.1"
+  }
+}
