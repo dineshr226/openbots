@@ -6,7 +6,7 @@
       "ScriptCommand": {
         "$type": "OpenBots.Commands.DataManipulation.Text.GetPDFTextCommand, OpenBots.Commands.DataManipulation",
         "v_FileSourceType": "File Path",
-        "v_FilePath": "ProjectPath + @\"\\Input\\Acme-statement-of-work 2.2.pdf\"",
+        "v_FilePath": "ProjectPath + @\"\\Input\\Acme-statement-of-work2.2.pdf\"",
         "v_OutputUserVariableName": "PDFData",
         "CommandID": "01f59406-84d8-422e-b5be-b1e69fd359eb",
         "CommandName": "GetPDFTextCommand",
@@ -68,7 +68,7 @@
         "CommandName": "TextExtractionCommand",
         "SelectionName": "Text Extraction",
         "LineNumber": 3,
-        "IsCommented": false,
+        "IsCommented": true,
         "PauseBeforeExecution": false,
         "CommandEnabled": true,
         "ScopeStartCommand": false,
@@ -81,12 +81,23 @@
     {
       "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
       "ScriptCommand": {
-        "$type": "OpenBots.Commands.Core.Misc.ShowMessageCommand, OpenBots.Commands.Core",
-        "v_Message": "\"The SWO number is \"+SWONumber",
-        "v_AutoCloseAfter": "0",
-        "CommandID": "effb2749-95d4-4a12-a6b8-84fcffd2f8ee",
-        "CommandName": "ShowMessageCommand",
-        "SelectionName": "Show Message",
+        "$type": "OpenBots.Commands.DataManipulation.Text.TextExtractionCommand, OpenBots.Commands.DataManipulation",
+        "v_InputText": "PDFData",
+        "v_TextExtractionType": "Extract All Before Text",
+        "v_TextExtractionTable": [
+          {
+            "Parameter Name": "Trailing Text",
+            "Parameter Value": "\"is an existing\""
+          },
+          {
+            "Parameter Name": "Skip Past Occurences",
+            "Parameter Value": "0"
+          }
+        ],
+        "v_OutputUserVariableName": "CompanyName",
+        "CommandID": "0d785674-2379-4da2-bdd9-780e4058853d",
+        "CommandName": "TextExtractionCommand",
+        "SelectionName": "Text Extraction",
         "LineNumber": 4,
         "IsCommented": false,
         "PauseBeforeExecution": false,
@@ -101,14 +112,717 @@
     {
       "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
       "ScriptCommand": {
-        "$type": "OpenBots.Commands.DataManipulation.Text.SplitTextCommand, OpenBots.Commands.DataManipulation",
+        "$type": "OpenBots.Commands.DataManipulation.Text.TextExtractionCommand, OpenBots.Commands.DataManipulation",
         "v_InputText": "PDFData",
-        "v_SplitCharacter": "new List<String>(){\"\\n\"}",
+        "v_TextExtractionType": "Extract All Between Text",
+        "v_TextExtractionTable": [
+          {
+            "Parameter Name": "Leading Text",
+            "Parameter Value": "\"CONTRACT ID:\""
+          },
+          {
+            "Parameter Name": "Trailing Text",
+            "Parameter Value": "\"DATE OF CONTRACT:\""
+          },
+          {
+            "Parameter Name": "Skip Past Occurences",
+            "Parameter Value": "0"
+          }
+        ],
+        "v_OutputUserVariableName": "ContractID",
+        "CommandID": "34f57bc1-5223-4c4b-9b73-7917c730b17e",
+        "CommandName": "TextExtractionCommand",
+        "SelectionName": "Text Extraction",
+        "LineNumber": 5,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.DataManipulation.Text.SplitTextCommand, OpenBots.Commands.DataManipulation",
+        "v_InputText": "CompanyName",
+        "v_SplitCharacter": "new List<String>(){\"PREPARED BY:\"}",
         "v_OutputUserVariableName": "SplitData",
         "CommandID": "8e87f48b-990e-4f29-9487-e0978637bac5",
         "CommandName": "SplitTextCommand",
         "SelectionName": "Split Text",
-        "LineNumber": 5,
+        "LineNumber": 6,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.DataManipulation.Text.SplitTextCommand, OpenBots.Commands.DataManipulation",
+        "v_InputText": "SplitData.Last()",
+        "v_SplitCharacter": "new List<String>(){\"\\n\"}",
+        "v_OutputUserVariableName": "SplitData",
+        "CommandID": "e394a832-a832-4c5d-856d-142c26fab081",
+        "CommandName": "SplitTextCommand",
+        "SelectionName": "Split Text",
+        "LineNumber": 7,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.Variable.SetVariableCommand, OpenBots.Commands.Core",
+        "v_Input": "SplitData.Last()",
+        "v_OutputUserVariableName": "CompanyName",
+        "CommandID": "989df105-f330-4ed8-9eec-6f2ee37a9069",
+        "CommandName": "SetVariableCommand",
+        "SelectionName": "Set Variable",
+        "LineNumber": 8,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.DataManipulation.Text.TextExtractionCommand, OpenBots.Commands.DataManipulation",
+        "v_InputText": "PDFData",
+        "v_TextExtractionType": "Extract All Between Text",
+        "v_TextExtractionTable": [
+          {
+            "Parameter Name": "Leading Text",
+            "Parameter Value": "\"existing\""
+          },
+          {
+            "Parameter Name": "Trailing Text",
+            "Parameter Value": "\". In order\""
+          },
+          {
+            "Parameter Name": "Skip Past Occurences",
+            "Parameter Value": "0"
+          }
+        ],
+        "v_OutputUserVariableName": "ClientType",
+        "CommandID": "eb47eda6-5c71-4ba8-a4ea-d73baeff7514",
+        "CommandName": "TextExtractionCommand",
+        "SelectionName": "Text Extraction",
+        "LineNumber": 9,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.DataManipulation.Text.TextExtractionCommand, OpenBots.Commands.DataManipulation",
+        "v_InputText": "PDFData",
+        "v_TextExtractionType": "Extract All Between Text",
+        "v_TextExtractionTable": [
+          {
+            "Parameter Name": "Leading Text",
+            "Parameter Value": "\"effective from\""
+          },
+          {
+            "Parameter Name": "Trailing Text",
+            "Parameter Value": "\"A further project\""
+          },
+          {
+            "Parameter Name": "Skip Past Occurences",
+            "Parameter Value": "0"
+          }
+        ],
+        "v_OutputUserVariableName": "ServiceStartDate",
+        "CommandID": "489038f8-d303-4d83-8e36-fe8bbd6b46d0",
+        "CommandName": "TextExtractionCommand",
+        "SelectionName": "Text Extraction",
+        "LineNumber": 10,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.DataManipulation.Text.TextExtractionCommand, OpenBots.Commands.DataManipulation",
+        "v_InputText": "PDFData",
+        "v_TextExtractionType": "Extract All Between Text",
+        "v_TextExtractionTable": [
+          {
+            "Parameter Name": "Leading Text",
+            "Parameter Value": "\"the mode of payment will be\""
+          },
+          {
+            "Parameter Name": "Trailing Text",
+            "Parameter Value": "\"Fees Summary\""
+          },
+          {
+            "Parameter Name": "Skip Past Occurences",
+            "Parameter Value": "0"
+          }
+        ],
+        "v_OutputUserVariableName": "PaymentMode",
+        "CommandID": "58709887-df79-4e49-9d9c-6302decea93e",
+        "CommandName": "TextExtractionCommand",
+        "SelectionName": "Text Extraction",
+        "LineNumber": 11,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.DataManipulation.Text.TextExtractionCommand, OpenBots.Commands.DataManipulation",
+        "v_InputText": "PDFData",
+        "v_TextExtractionType": "Extract All After Text",
+        "v_TextExtractionTable": [
+          {
+            "Parameter Name": "Leading Text",
+            "Parameter Value": "\"TOTAL:\""
+          },
+          {
+            "Parameter Name": "Skip Past Occurences",
+            "Parameter Value": "0"
+          }
+        ],
+        "v_OutputUserVariableName": "TotalPayment",
+        "CommandID": "1b580339-e68f-4f97-817e-5ae4eb4beda8",
+        "CommandName": "TextExtractionCommand",
+        "SelectionName": "Text Extraction",
+        "LineNumber": 12,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.DataManipulation.Text.SplitTextCommand, OpenBots.Commands.DataManipulation",
+        "v_InputText": "TotalPayment",
+        "v_SplitCharacter": "new List<String>(){\"\\n\"}",
+        "v_OutputUserVariableName": "SplitData",
+        "CommandID": "b7c39e7d-0a13-4b5a-9292-db75268be455",
+        "CommandName": "SplitTextCommand",
+        "SelectionName": "Split Text",
+        "LineNumber": 13,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.DataManipulation.Text.SplitTextCommand, OpenBots.Commands.DataManipulation",
+        "v_InputText": "SplitData.First()",
+        "v_SplitCharacter": "new List<String>(){\"€\"}",
+        "v_OutputUserVariableName": "SplitData",
+        "CommandID": "6f54d305-0b6f-4f88-944e-31cfb4d6c092",
+        "CommandName": "SplitTextCommand",
+        "SelectionName": "Split Text",
+        "LineNumber": 14,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.Variable.SetVariableCommand, OpenBots.Commands.Core",
+        "v_Input": "SplitData.Last()",
+        "v_OutputUserVariableName": "TotalPayment",
+        "CommandID": "96022896-6de5-4f26-ab9f-fd5527ebe2e3",
+        "CommandName": "SetVariableCommand",
+        "SelectionName": "Set Variable",
+        "LineNumber": 15,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.DataManipulation.Text.TextExtractionCommand, OpenBots.Commands.DataManipulation",
+        "v_InputText": "PDFData",
+        "v_TextExtractionType": "Extract All Between Text",
+        "v_TextExtractionTable": [
+          {
+            "Parameter Name": "Leading Text",
+            "Parameter Value": "\"Statement of Work and\""
+          },
+          {
+            "Parameter Name": "Trailing Text",
+            "Parameter Value": "\"Without limiting\""
+          },
+          {
+            "Parameter Name": "Skip Past Occurences",
+            "Parameter Value": "0"
+          }
+        ],
+        "v_OutputUserVariableName": "PaymentDate",
+        "CommandID": "a474fc9f-8cce-42c8-9e12-2187ded50cc2",
+        "CommandName": "TextExtractionCommand",
+        "SelectionName": "Text Extraction",
+        "LineNumber": 16,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.DataManipulation.Text.TextExtractionCommand, OpenBots.Commands.DataManipulation",
+        "v_InputText": "PDFData",
+        "v_TextExtractionType": "Extract All Between Text",
+        "v_TextExtractionTable": [
+          {
+            "Parameter Name": "Leading Text",
+            "Parameter Value": "\"may be viewed at\""
+          },
+          {
+            "Parameter Name": "Trailing Text",
+            "Parameter Value": "\"Signatures\""
+          },
+          {
+            "Parameter Name": "Skip Past Occurences",
+            "Parameter Value": "0"
+          }
+        ],
+        "v_OutputUserVariableName": "URL",
+        "CommandID": "a3a8f24c-ee4d-40b5-94f7-d634db4c824e",
+        "CommandName": "TextExtractionCommand",
+        "SelectionName": "Text Extraction",
+        "LineNumber": 17,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.DataManipulation.Text.TextExtractionCommand, OpenBots.Commands.DataManipulation",
+        "v_InputText": "PDFData",
+        "v_TextExtractionType": "Extract All Between Text",
+        "v_TextExtractionTable": [
+          {
+            "Parameter Name": "Leading Text",
+            "Parameter Value": "\"Name:\""
+          },
+          {
+            "Parameter Name": "Trailing Text",
+            "Parameter Value": "\"Title :\""
+          },
+          {
+            "Parameter Name": "Skip Past Occurences",
+            "Parameter Value": "1"
+          }
+        ],
+        "v_OutputUserVariableName": "Name",
+        "CommandID": "34959cd4-369f-4ae4-ab7a-dd158c4561fa",
+        "CommandName": "TextExtractionCommand",
+        "SelectionName": "Text Extraction",
+        "LineNumber": 18,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.DataManipulation.Text.TextExtractionCommand, OpenBots.Commands.DataManipulation",
+        "v_InputText": "PDFData",
+        "v_TextExtractionType": "Extract All After Text",
+        "v_TextExtractionTable": [
+          {
+            "Parameter Name": "Leading Text",
+            "Parameter Value": "\"Title :\""
+          },
+          {
+            "Parameter Name": "Skip Past Occurences",
+            "Parameter Value": "0"
+          }
+        ],
+        "v_OutputUserVariableName": "Title",
+        "CommandID": "be81e390-e08e-4920-97eb-73fec1e26838",
+        "CommandName": "TextExtractionCommand",
+        "SelectionName": "Text Extraction",
+        "LineNumber": 19,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.DataManipulation.Text.SplitTextCommand, OpenBots.Commands.DataManipulation",
+        "v_InputText": "Title",
+        "v_SplitCharacter": "new List<String>(){\"Title:\"}",
+        "v_OutputUserVariableName": "SplitData",
+        "CommandID": "78a44e78-e687-4f85-b9b7-e05680abcce6",
+        "CommandName": "SplitTextCommand",
+        "SelectionName": "Split Text",
+        "LineNumber": 20,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.Variable.SetVariableCommand, OpenBots.Commands.Core",
+        "v_Input": "SplitData.First().Trim()",
+        "v_OutputUserVariableName": "Title",
+        "CommandID": "5552ada1-fd64-42c7-8cbb-db69a753ddac",
+        "CommandName": "SetVariableCommand",
+        "SelectionName": "Set Variable",
+        "LineNumber": 21,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.DataManipulation.Text.TextExtractionCommand, OpenBots.Commands.DataManipulation",
+        "v_InputText": "PDFData",
+        "v_TextExtractionType": "Extract All Between Text",
+        "v_TextExtractionTable": [
+          {
+            "Parameter Name": "Leading Text",
+            "Parameter Value": "\"Notice\""
+          },
+          {
+            "Parameter Name": "Trailing Text",
+            "Parameter Value": "\"Address\""
+          },
+          {
+            "Parameter Name": "Skip Past Occurences",
+            "Parameter Value": "1"
+          }
+        ],
+        "v_OutputUserVariableName": "Address",
+        "CommandID": "121447c3-e5cc-4e45-819a-14cf16103855",
+        "CommandName": "TextExtractionCommand",
+        "SelectionName": "Text Extraction",
+        "LineNumber": 22,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.DataManipulation.Text.TextExtractionCommand, OpenBots.Commands.DataManipulation",
+        "v_InputText": "PDFData",
+        "v_TextExtractionType": "Extract All After Text",
+        "v_TextExtractionTable": [
+          {
+            "Parameter Name": "Leading Text",
+            "Parameter Value": "\"Email\""
+          },
+          {
+            "Parameter Name": "Skip Past Occurences",
+            "Parameter Value": "1"
+          }
+        ],
+        "v_OutputUserVariableName": "CompanySupport",
+        "CommandID": "006325e9-5610-4cdc-a5be-022a83481273",
+        "CommandName": "TextExtractionCommand",
+        "SelectionName": "Text Extraction",
+        "LineNumber": 23,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.DataManipulation.Text.SplitTextCommand, OpenBots.Commands.DataManipulation",
+        "v_InputText": "CompanySupport.Trim()",
+        "v_SplitCharacter": "new List<String>(){\"\\n\"}",
+        "v_OutputUserVariableName": "SplitData",
+        "CommandID": "20a1b6b3-e768-4af7-8a6c-8373165e3cb3",
+        "CommandName": "SplitTextCommand",
+        "SelectionName": "Split Text",
+        "LineNumber": 24,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.Variable.SetVariableCommand, OpenBots.Commands.Core",
+        "v_Input": "SplitData.First().Trim()",
+        "v_OutputUserVariableName": "CompanySupport",
+        "CommandID": "26c77c66-9b27-4c38-9bc6-beb249d7a37a",
+        "CommandName": "SetVariableCommand",
+        "SelectionName": "Set Variable",
+        "LineNumber": 25,
+        "IsCommented": false,
+        "PauseBeforeExecution": true,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.DataManipulation.Text.TextExtractionCommand, OpenBots.Commands.DataManipulation",
+        "v_InputText": "PDFData",
+        "v_TextExtractionType": "Extract All After Text",
+        "v_TextExtractionTable": [
+          {
+            "Parameter Name": "Leading Text",
+            "Parameter Value": "\"Contact Email\""
+          },
+          {
+            "Parameter Name": "Skip Past Occurences",
+            "Parameter Value": "0"
+          }
+        ],
+        "v_OutputUserVariableName": "ContactEmail",
+        "CommandID": "ed7baf5a-b470-4ae7-91b1-1159aceac2fe",
+        "CommandName": "TextExtractionCommand",
+        "SelectionName": "Text Extraction",
+        "LineNumber": 26,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.DataManipulation.Text.SplitTextCommand, OpenBots.Commands.DataManipulation",
+        "v_InputText": "ContactEmail.Trim()",
+        "v_SplitCharacter": "new List<String>(){\" \"}",
+        "v_OutputUserVariableName": "SplitData",
+        "CommandID": "2c821f3d-e8c2-48ee-a91c-b65d216a1784",
+        "CommandName": "SplitTextCommand",
+        "SelectionName": "Split Text",
+        "LineNumber": 27,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.Variable.SetVariableCommand, OpenBots.Commands.Core",
+        "v_Input": "SplitData.First().Trim()",
+        "v_OutputUserVariableName": "ContactEmail",
+        "CommandID": "63a1b78c-9fad-4011-93a7-cf353e1601ef",
+        "CommandName": "SetVariableCommand",
+        "SelectionName": "Set Variable",
+        "LineNumber": 28,
+        "IsCommented": false,
+        "PauseBeforeExecution": true,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.DataManipulation.Dictionary.CreateDictionaryCommand, OpenBots.Commands.DataManipulation",
+        "v_ColumnNameDataTable": [
+          {
+            "Keys": "\"SOW\"",
+            "Values": "ContractID"
+          },
+          {
+            "Keys": "\"CompanyName\"",
+            "Values": "CompanyName"
+          },
+          {
+            "Keys": "\"ServiceStartDate\"",
+            "Values": "ServiceStartDate"
+          }
+        ],
+        "v_OutputUserVariableName": "ServiceDetailsDict",
+        "CommandID": "fc24cfa7-c11a-429f-8c3b-4c2a45666f52",
+        "CommandName": "CreateDictionaryCommand",
+        "SelectionName": "Create Dictionary",
+        "LineNumber": 29,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.Variable.SetVariableCommand, OpenBots.Commands.Core",
+        "v_Input": "ServiceDetailsDict",
+        "v_OutputUserVariableName": "Out_ServiceDetailsDict",
+        "CommandID": "37012262-bd44-40b0-9b6e-f2bfe6de8b56",
+        "CommandName": "SetVariableCommand",
+        "SelectionName": "Set Variable",
+        "LineNumber": 30,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.Misc.ShowMessageCommand, OpenBots.Commands.Core",
+        "v_Message": "\"The SWO number is : \"+ContractID.Trim()+Environment.NewLine+\" Contract ID : \"+ContractID.Trim()+Environment.NewLine+\" CompanyName : \"+CompanyName+Environment.NewLine+\" Client Type : \"+ClientType.Trim()+Environment.NewLine+\" Service Start Date : \"+ServiceStartDate.Trim()+Environment.NewLine+\" Payment mode : \"+PaymentMode.Trim()+Environment.NewLine+\" Total Amount : \"+TotalPayment+Environment.NewLine+\" Payment Date : \"+PaymentDate+Environment.NewLine+\"URL : \"+URL.Trim()+Environment.NewLine+\"Name : \"+Name.Trim()+Environment.NewLine+\"Title : \"+Title.Trim()+Environment.NewLine+\"Address : \"+Address.Trim()+Environment.NewLine+\"Company Support : \"+CompanySupport.Trim()+Environment.NewLine+\"Contact Email : \"+ContactEmail.Trim()+Environment.NewLine",
+        "v_AutoCloseAfter": "0",
+        "CommandID": "effb2749-95d4-4a12-a6b8-84fcffd2f8ee",
+        "CommandName": "ShowMessageCommand",
+        "SelectionName": "Show Message",
+        "LineNumber": 31,
         "IsCommented": false,
         "PauseBeforeExecution": false,
         "CommandEnabled": true,
@@ -123,6 +837,60 @@
   "Variables": [
     {
       "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "Address",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "ClientType",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "CompanyName",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "CompanySupport",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "ContactEmail",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "ContractID",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "Name",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "PaymentDate",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "PaymentMode",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
       "VariableName": "PDFData",
       "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
       "VariableValue": ""
@@ -135,6 +903,18 @@
     },
     {
       "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "ServiceDetailsDict",
+      "VariableType": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "ServiceStartDate",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
       "VariableName": "SplitData",
       "VariableType": "System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
       "VariableValue": ""
@@ -144,9 +924,36 @@
       "VariableName": "SWONumber",
       "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
       "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "Title",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "TotalPayment",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "URL",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
     }
   ],
-  "Arguments": [],
+  "Arguments": [
+    {
+      "$type": "OpenBots.Core.Script.ScriptArgument, OpenBots.Core",
+      "ArgumentName": "Out_ServiceDetailsDict",
+      "ArgumentType": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "ArgumentValue": null,
+      "Direction": 1,
+      "AssignedVariable": null
+    }
+  ],
   "Elements": [],
   "ImportedNamespaces": {
     "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.List`1[[OpenBots.Core.Script.AssemblyReference, OpenBots.Core]], mscorlib]], mscorlib",

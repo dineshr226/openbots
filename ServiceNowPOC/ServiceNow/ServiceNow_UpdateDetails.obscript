@@ -127,7 +127,7 @@
         ],
         "v_ClearOption": "Yes",
         "v_SimulateType": "Yes",
-        "v_TextToSet": "\"Test\"",
+        "v_TextToSet": "in_ServiceDetailDict[\"CompanyName\"].ToString()",
         "v_Timeout": "30",
         "CommandID": "b71b2963-4c12-4e33-b15b-5ae49da6257a",
         "CommandName": "NativeBrowserSetTextCommand",
@@ -158,7 +158,16 @@
       "VariableValue": "\"Value Provided at Runtime\""
     }
   ],
-  "Arguments": [],
+  "Arguments": [
+    {
+      "$type": "OpenBots.Core.Script.ScriptArgument, OpenBots.Core",
+      "ArgumentName": "in_ServiceDetailDict",
+      "ArgumentType": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "ArgumentValue": null,
+      "Direction": 0,
+      "AssignedVariable": null
+    }
+  ],
   "Elements": [],
   "ImportedNamespaces": {
     "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.List`1[[OpenBots.Core.Script.AssemblyReference, OpenBots.Core]], mscorlib]], mscorlib",

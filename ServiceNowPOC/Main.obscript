@@ -12,7 +12,7 @@
         "CommandName": "RunTaskCommand",
         "SelectionName": "Run Task",
         "LineNumber": 1,
-        "IsCommented": false,
+        "IsCommented": true,
         "PauseBeforeExecution": false,
         "CommandEnabled": true,
         "ScopeStartCommand": false,
@@ -27,8 +27,15 @@
       "ScriptCommand": {
         "$type": "OpenBots.Commands.Core.Task.RunTaskCommand, OpenBots.Commands.Core",
         "v_TaskPath": "ProjectPath + @\"\\PDF\\ExtractPDFData.obscript\"",
-        "v_AssignArguments": false,
-        "v_ArgumentAssignments": [],
+        "v_AssignArguments": true,
+        "v_ArgumentAssignments": [
+          {
+            "ArgumentName": "Out_ServiceDetailsDict",
+            "ArgumentType": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+            "ArgumentValue": "ServiceDetailsDict",
+            "ArgumentDirection": "Out"
+          }
+        ],
         "CommandID": "c5573e33-c985-4f5c-a4a3-82176bd42603",
         "CommandName": "RunTaskCommand",
         "SelectionName": "Run Task",
@@ -89,8 +96,15 @@
       "ScriptCommand": {
         "$type": "OpenBots.Commands.Core.Task.RunTaskCommand, OpenBots.Commands.Core",
         "v_TaskPath": "ProjectPath + @\"\\ServiceNow\\ServiceNow_UpdateDetails.obscript\"",
-        "v_AssignArguments": false,
-        "v_ArgumentAssignments": [],
+        "v_AssignArguments": true,
+        "v_ArgumentAssignments": [
+          {
+            "ArgumentName": "in_ServiceDetailDict",
+            "ArgumentType": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+            "ArgumentValue": "ServiceDetailsDict",
+            "ArgumentDirection": "In"
+          }
+        ],
         "CommandID": "0350f8ad-f49f-4af0-a388-867ac5bb0831",
         "CommandName": "RunTaskCommand",
         "SelectionName": "Run Task",
@@ -112,6 +126,12 @@
       "VariableName": "ProjectPath",
       "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
       "VariableValue": "\"Value Provided at Runtime\""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "ServiceDetailsDict",
+      "VariableType": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": null
     }
   ],
   "Arguments": [],

@@ -17,7 +17,7 @@ PREPARED BY: Globex
 ACME is an existing SaaS customer. In order to link tickets together to a root problem and be able to 
 respond to those linked tickets in a single step, as well as providing ITIL methodology directives, Globex 
 has provided a prototype configuration and customisation in order to achieve the desired functionality 
-effective from October 01, 2021’ signed under the SOW number SOW NO. 8556345IWC 
+effective from October 01, 2021’  
 A further project was undertaken to include additional enhancements linked to this work and these 
 have been provided in a test environment to prove the additional functionality. 
 ACME have approved the functionality of the prototype and require migration of the ticket management 
@@ -142,6 +142,7 @@ Business Development Manager €1,200/day
  
 Globex may utilize a Globex certified third party vendor to complete all or some of the work specified in 
 this statement of work. Documented below are the estimated Consulting services fees. 
+Agreed with client, the mode of payment will be Cheque.  
 Fees Summary 
 This estimate does not include travel and “out of pocket” expenses Globex may incur. 
  
@@ -193,15 +194,13 @@ Name: Name:
 Anil Kapadia 
 Title : VP consulting services Title: Procurement Director 
 Date : Date: 
-29 November 2020 30 November 2020 
+01 October 2021 01 October 2021 
   
- 
- 
+  
 Notice Notice 
 Dwarkamai , Ayodhya Kumar Pavilion, 2424, East Street, 
 Address Address 
-Camp, Next To Victory Cinema, 
-nagar, Nagpur, Street 
+nagar, Nagpur, Street Camp, Next To Victory Cinema, 
 440024 Pune, Maharashtra 411001 
  
  
