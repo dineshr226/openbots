@@ -1,0 +1,251 @@
+{
+  "$type": "OpenBots.Core.Script.Script, OpenBots.Core",
+  "Commands": [
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.DataManipulation.Text.GetPDFTextCommand, OpenBots.Commands.DataManipulation",
+        "v_FileSourceType": "File Path",
+        "v_FilePath": "ProjectPath + @\"\\Input\\Acme-statement-of-work 2.2.pdf\"",
+        "v_OutputUserVariableName": "PDFData",
+        "CommandID": "01f59406-84d8-422e-b5be-b1e69fd359eb",
+        "CommandName": "GetPDFTextCommand",
+        "SelectionName": "Get PDF Text",
+        "LineNumber": 1,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.SystemAutomation.TextFile.WriteCreateTextFileCommand, OpenBots.Commands.SystemAutomation",
+        "v_FilePath": "ProjectPath + @\"\\Input\\Acme-statement-of-work 2.2.txt\"",
+        "v_TextToWrite": "PDFData",
+        "v_Overwrite": "Overwrite",
+        "CommandID": "e48678e3-5f8f-491b-ab46-9b0cfd3423f4",
+        "CommandName": "WriteCreateTextFileCommand",
+        "SelectionName": "Write/Create Text File",
+        "LineNumber": 2,
+        "IsCommented": true,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.DataManipulation.Text.TextExtractionCommand, OpenBots.Commands.DataManipulation",
+        "v_InputText": "PDFData",
+        "v_TextExtractionType": "Extract All Between Text",
+        "v_TextExtractionTable": [
+          {
+            "Parameter Name": "Leading Text",
+            "Parameter Value": "\"SOW NO.\""
+          },
+          {
+            "Parameter Name": "Trailing Text",
+            "Parameter Value": "\"A further\""
+          },
+          {
+            "Parameter Name": "Skip Past Occurences",
+            "Parameter Value": "0"
+          }
+        ],
+        "v_OutputUserVariableName": "SWONumber",
+        "CommandID": "f4328dcd-f82d-43a4-8b25-4e997ccea43b",
+        "CommandName": "TextExtractionCommand",
+        "SelectionName": "Text Extraction",
+        "LineNumber": 3,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.Misc.ShowMessageCommand, OpenBots.Commands.Core",
+        "v_Message": "\"The SWO number is \"+SWONumber",
+        "v_AutoCloseAfter": "0",
+        "CommandID": "effb2749-95d4-4a12-a6b8-84fcffd2f8ee",
+        "CommandName": "ShowMessageCommand",
+        "SelectionName": "Show Message",
+        "LineNumber": 4,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.DataManipulation.Text.SplitTextCommand, OpenBots.Commands.DataManipulation",
+        "v_InputText": "PDFData",
+        "v_SplitCharacter": "new List<String>(){\"\\n\"}",
+        "v_OutputUserVariableName": "SplitData",
+        "CommandID": "8e87f48b-990e-4f29-9487-e0978637bac5",
+        "CommandName": "SplitTextCommand",
+        "SelectionName": "Split Text",
+        "LineNumber": 5,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    }
+  ],
+  "Variables": [
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "PDFData",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "ProjectPath",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": "\"Value Provided at Runtime\""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "SplitData",
+      "VariableType": "System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "SWONumber",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
+    }
+  ],
+  "Arguments": [],
+  "Elements": [],
+  "ImportedNamespaces": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.List`1[[OpenBots.Core.Script.AssemblyReference, OpenBots.Core]], mscorlib]], mscorlib",
+    "Microsoft.Office.Interop.Outlook": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "Microsoft.Office.Interop.Outlook",
+        "AssemblyVersion": "15.0.0.0"
+      }
+    ],
+    "MimeKit": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "MimeKit",
+        "AssemblyVersion": "2.14.0.0"
+      }
+    ],
+    "OpenBots.Core.Model.ApplicationModel": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "OpenBots.Core",
+        "AssemblyVersion": "1.6.1.0"
+      }
+    ],
+    "System": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Collections.Generic": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Data": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Data",
+        "AssemblyVersion": "4.0.0.0"
+      },
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Data.DataSetExtensions",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Drawing": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Drawing",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Linq": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Core",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Security": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Text": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Text.RegularExpressions": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Threading.Tasks": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Windows.Forms": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Windows.Forms",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ]
+  },
+  "Version": "1.6.1.0"
+}

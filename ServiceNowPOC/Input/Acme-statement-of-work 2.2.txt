@@ -1,0 +1,224 @@
+ 
+  SAMPLE STATEMENT OF WORK  
+STATEMENT OF WORK 
+ 
+ 
+ 
+ 
+CONTRACT ID: R3435-T3090 
+ 
+ 
+DATE OF CONTRACT: 28 November 2020 
+ 
+ 
+FOR: ACME Company 
+PREPARED BY: Globex 
+ 
+ACME is an existing SaaS customer. In order to link tickets together to a root problem and be able to 
+respond to those linked tickets in a single step, as well as providing ITIL methodology directives, Globex 
+has provided a prototype configuration and customisation in order to achieve the desired functionality 
+effective from October 01, 2021’ signed under the SOW number SOW NO. 8556345IWC 
+A further project was undertaken to include additional enhancements linked to this work and these 
+have been provided in a test environment to prove the additional functionality. 
+ACME have approved the functionality of the prototype and require migration of the ticket management 
+functionality into the production environment. 
+In addition, there is a requirement to provide management information in the form of a custom report 
+for the functionality relating to ticket linking. 
+ 
+Solution Overview 
+Globex has provided the description of the services to be performed in the Deliverables section below. 
+Further requirements and or customizations defined or requested by Customer after baseline acceptance of 
+this Statement of Work could change the scope of this project and will be managed according to the 
+Change Management process defined in the Change Management Appendix. 
+The solution will eventually comprise: 
+ 
+Customisation and Configuration functionality from Prototype to the production 
+environment 
+Custom Reports for the new configuration / customisation 
+ 
+Regional Interface and Language Requirements 
+ 
+ Page 1 of 9  
+  SAMPLE STATEMENT OF WORK  
+• acme : en_GB 
+Functional Scope: 
+ 
+• Migration of customisations 
+• Custom report 
+ 
+The proposed process for the Globex delivery is: 
+ 
+• Project Management 
+• Application Development 
+• Quality Assurance Testing 
+• Support for Users 
+ 
+Project Deliverables 
+The following section defines and explains the key deliverables for this Consulting services engagement. 
+Project Management 
+Globex’s Project Manager (PM) will be responsible for managing the level of effort associated with this 
+Statement of Work. The PM will develop the Project Plan which describes the tasks, activities, milestones 
+and timelines associated with this engagement. The Project Manager will maintain a risks/issues log and 
+record project progress in the form of weekly status reports. A Delivery Manager will have responsibility 
+for delivery assurance and will serve as an escalation point of contact for the project team. 
+The Customer will designate one person to serve as Project Manager.. 
+Deliverables: 
+ 
+Project Plan: documents project activities, ownership of those activities, milestones, schedule, and 
+dependencies. 
+Development 
+Globex developer will migrate the required customisations from the prototype environment to the 
+production environment according to the project plan. 
+Quality Assurance 
+Globex will test the system as identified in the Project Plan and will certify the system is ready for 
+Acceptance Testing. 
+ACME will be responsible for acceptance testing against its business requirements. This includes test 
+planning and management, test case development, and execution of acceptance tests. 
+Administration Support 
+Globex will provide support to ACME to the point of a successful deployment of the functional 
+changes as agreed in the Project Plan. 
+ Page 2 of 9  
+  SAMPLE STATEMENT OF WORK  
+Custom Report 
+Globex consultant will provide ACME with one standard Globex report as described in the Project plan 
+and is likely to include the filters and columns. 
+ 
+Risks 
+Risk Assessment is a process to identify, analyse, plan, track and control risks related to the 
+implementation of or integration with the Globex Software. There are potential risks associated with the 
+project that need to be addressed via a mitigation strategy. Below are the identified risks associated with 
+this project: 
+ 
+Risk Mitigation 
+Adoption of the software Globex will assist with promotion of the tool and training. 
+Deployment of the Globex will monitor the deployment of the integrated 
+changes solution and adjust the project plan as necessary. 
+Resource availability Secure approval from project sponsors to support project through 
+completion. 
+  
+ 
+ 
+Assumptions 
+Assumptions are factors used for planning purposes that are considered true, real, or certain. Assumptions 
+help define scope and determine level of effort and timeframes. 
+ 
+Overall project assumptions 
+1. This project assumes instances will be involved in this project in the following 
+languages: English 
+2. The Services included in this Statement of Work will be performed: Offsite 
+3. The Customer will be charged for all travel and related expenses according to Globex’s travel 
+policies unless otherwise noted. – Travel and related expenses will not be recharged as per 
+agreement with ACME 
+4. Globex will provide a RNT Certified Project Manager and may utilize Globex certified 
+third party resources to complete some or all of the work on this engagement. 
+5. All services must be used within 12 months of purchase to avoid expiration. 
+ Page 3 of 9  
+  SAMPLE STATEMENT OF WORK  
+Exclusions 
+In addition to identifying the specific components that are included in the project, it is equally important 
+to specify those components that are NOT included in the Statement of Work in order to manage 
+expectations and scope. The following list of items is specifically excluded from this statement of work: 
+1. Globex is not responsible for advanced Database, Operating System and Network configuration 
+and/or troubleshooting are outside the scope of this Statement of Work. This includes, but is not 
+limited to: 
+• Database Replication, Optimization or Partitions 
+• Router/Switch troubleshooting 
+• DNS issues and SSL configuration 
+• Internet Connectivity 
+• TCP/IP configuration 
+ Page 4 of 9  
+  SAMPLE STATEMENT OF WORK  
+Rates 
+Services provided under this Statement of Work shall be based on Globex standard consulting 
+rates, which are listed below: 
+ 
+Role Euros 
+Developer €1,200/day 
+Consultant €1,200/day 
+Test Manager €1,200/day 
+Education Trainer €1,200/day 
+Project Manager €1,200/day 
+Business Development Manager €1,200/day 
+ 
+Globex may utilize a Globex certified third party vendor to complete all or some of the work specified in 
+this statement of work. Documented below are the estimated Consulting services fees. 
+Fees Summary 
+This estimate does not include travel and “out of pocket” expenses Globex may incur. 
+ 
+CONSULTING SERVICE DAYS FEE 
+Deliverable 1 Project Management 8 € 9,600 
+Deliverable 2 Development 6 € 7,200 
+Deliverable 3 Quality Assurance Testing 4 € 4,800 
+Deliverable 4 Administration Support 4 € 4,800 
+Deliverable 5 Custom Report 6 € 7,200 
+TOTAL: 28 € 33,600 
+ Page 5 of 9  
+  SAMPLE STATEMENT OF WORK  
+ 
+Payment Terms 
+ 
+Fixed Fee 
+ 
+Globex will invoice the Customer following signature of this Statement of Work and payments shall be 
+due net thirty (30) days from invoice date. Without limiting its rights or remedies, Globex shall have the 
+right to halt or terminate entirely any services until payment is received on past-due invoices. 
+Customer shall pay to Globex a fee of thirty-three thousand six hundred Euros (€33,600) (“Fee”) for 
+Services described in this Statement of Work, plus actual expenses incurred for the duration of the 
+project. 
+ 
+Expenses 
+Estimates do not include travel and related expenses Globex may incur in support of this engagement. 
+Globex will send an invoice on a monthly basis for expenses incurred during the previous month. 
+Payments for such invoices are due net thirty (30) days from date of invoice. 
+Terms & Conditions 
+ 
+Globex Standard Terms and Conditions govern this Statement of Work and may be viewed at 
+http://www.globex.com/saas/agreements/master.html. 
+ 
+ 
+ 
+Signatures 
+ 
+ 
+   
+Globex, Inc. 
+ACME 
+Consulting services 
+ 
+ 
+   
+ 
+Satish Prasad 
+Name: Name: 
+Anil Kapadia 
+Title : VP consulting services Title: Procurement Director 
+Date : Date: 
+29 November 2020 30 November 2020 
+  
+ 
+ 
+Notice Notice 
+Dwarkamai , Ayodhya Kumar Pavilion, 2424, East Street, 
+Address Address 
+Camp, Next To Victory Cinema, 
+nagar, Nagpur, Street 
+440024 Pune, Maharashtra 411001 
+ 
+ 
+ 
+Email Email 
+clientsupport@globex.com 
+support@acme.com 
+ Page 6 of 9  
+  SAMPLE STATEMENT OF WORK  
+ 
+Contact Contact Email 
+Anil.kapadia@acme.com Satish.prasad@globex.com 
+Email Id ID 
+ 
+  
+ 
+ 
+ 
+Page 7 of 9 
+ 

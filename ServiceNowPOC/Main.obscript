@@ -1,0 +1,219 @@
+{
+  "$type": "OpenBots.Core.Script.Script, OpenBots.Core",
+  "Commands": [
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.Task.RunTaskCommand, OpenBots.Commands.Core",
+        "v_TaskPath": "ProjectPath + @\"\\Email\\ReadEmail.obscript\"",
+        "v_AssignArguments": false,
+        "v_ArgumentAssignments": [],
+        "CommandID": "e5bb730c-665e-4e51-b0f4-86a77acf996e",
+        "CommandName": "RunTaskCommand",
+        "SelectionName": "Run Task",
+        "LineNumber": 1,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.Task.RunTaskCommand, OpenBots.Commands.Core",
+        "v_TaskPath": "ProjectPath + @\"\\PDF\\ExtractPDFData.obscript\"",
+        "v_AssignArguments": false,
+        "v_ArgumentAssignments": [],
+        "CommandID": "c5573e33-c985-4f5c-a4a3-82176bd42603",
+        "CommandName": "RunTaskCommand",
+        "SelectionName": "Run Task",
+        "LineNumber": 2,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.Task.RunTaskCommand, OpenBots.Commands.Core",
+        "v_TaskPath": "ProjectPath + @\"\\ServiceNow\\ServiceNow_Login.obscript\"",
+        "v_AssignArguments": false,
+        "v_ArgumentAssignments": [],
+        "CommandID": "388634ad-f90a-4af4-91bb-9121ae026b70",
+        "CommandName": "RunTaskCommand",
+        "SelectionName": "Run Task",
+        "LineNumber": 3,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.Misc.ShowMessageCommand, OpenBots.Commands.Core",
+        "v_Message": "\"Login done\"",
+        "v_AutoCloseAfter": "0",
+        "CommandID": "79902720-ce22-4ec8-9430-52520504e0a2",
+        "CommandName": "ShowMessageCommand",
+        "SelectionName": "Show Message",
+        "LineNumber": 4,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.Task.RunTaskCommand, OpenBots.Commands.Core",
+        "v_TaskPath": "ProjectPath + @\"\\ServiceNow\\ServiceNow_UpdateDetails.obscript\"",
+        "v_AssignArguments": false,
+        "v_ArgumentAssignments": [],
+        "CommandID": "0350f8ad-f49f-4af0-a388-867ac5bb0831",
+        "CommandName": "RunTaskCommand",
+        "SelectionName": "Run Task",
+        "LineNumber": 5,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    }
+  ],
+  "Variables": [
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "ProjectPath",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": "\"Value Provided at Runtime\""
+    }
+  ],
+  "Arguments": [],
+  "Elements": [],
+  "ImportedNamespaces": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.List`1[[OpenBots.Core.Script.AssemblyReference, OpenBots.Core]], mscorlib]], mscorlib",
+    "Microsoft.Office.Interop.Outlook": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "Microsoft.Office.Interop.Outlook",
+        "AssemblyVersion": "15.0.0.0"
+      }
+    ],
+    "MimeKit": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "MimeKit",
+        "AssemblyVersion": "2.14.0.0"
+      }
+    ],
+    "OpenBots.Core.Model.ApplicationModel": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "OpenBots.Core",
+        "AssemblyVersion": "1.6.1.0"
+      }
+    ],
+    "System": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Collections.Generic": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Data": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Data",
+        "AssemblyVersion": "4.0.0.0"
+      },
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Data.DataSetExtensions",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Drawing": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Drawing",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Linq": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Core",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Security": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Text": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Text.RegularExpressions": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Threading.Tasks": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Windows.Forms": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Windows.Forms",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ]
+  },
+  "Version": "1.6.1.0"
+}
