@@ -1,0 +1,292 @@
+{
+  "$type": "OpenBots.Core.Script.Script, OpenBots.Core",
+  "Commands": [
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.Selenium.SeleniumCreateBrowserCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "BrowserInstance",
+        "v_EngineType": "Chrome",
+        "v_URL": "\"\"",
+        "v_BrowserWindowOption": "Maximize",
+        "v_SeleniumOptions": null,
+        "CommandID": "94cc21da-951f-4803-a9e5-feed91474c1b",
+        "CommandName": "SeleniumCreateBrowserCommand",
+        "SelectionName": "Selenium Create Browser",
+        "LineNumber": 1,
+        "IsCommented": true,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.Selenium.Browser.SeleniumSwitchBrowserWindowCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "BrowserInstance",
+        "v_WindowMatchType": "Window Title",
+        "v_MatchSpecification": "Contains Match",
+        "v_CaseSensitiveMatch": "No",
+        "v_MatchParameter": "\"Incidents\"",
+        "CommandID": "5faefdca-5826-4e78-b18b-de4b85bbdffe",
+        "CommandName": "SeleniumSwitchBrowserWindowCommand",
+        "SelectionName": "Selenium Switch Browser Window",
+        "LineNumber": 2,
+        "IsCommented": true,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.NativeBrowserAttachApplicationCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "BrowserInstance",
+        "v_EngineType": "Chrome",
+        "v_TabTitle": "\"*Incidents | ServiceNow\"",
+        "v_Timeout": "30",
+        "CommandID": "3e397ff4-458c-4572-87a5-3f483b6e9052",
+        "CommandName": "NativeBrowserAttachApplicationCommand",
+        "SelectionName": "Native Browser Attach Application",
+        "LineNumber": 3,
+        "IsCommented": true,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserClickElementCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "BrowserInstance",
+        "v_NativeSearchParameters": [
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"XPath\"",
+            "Parameter Value": "\"/html/body/div[1]/div[1]/span/div/div[1]/div/div[1]/button[2]\""
+          },
+          {
+            "Enabled": null,
+            "Parameter Name": "\"Relative XPath\"",
+            "Parameter Value": "\"//button[normalize-space()='New']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"ID\"",
+            "Parameter Value": "\"sysverb_new\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Name\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Tag Name\"",
+            "Parameter Value": "\"BUTTON\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Class Name\"",
+            "Parameter Value": "\"selected_action action_context btn btn-primary\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Link Text\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector\"",
+            "Parameter Value": "\"button#sysverb_new\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 1\"",
+            "Parameter Value": "\"BUTTON[type='submit']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 2\"",
+            "Parameter Value": "\"BUTTON[class='selected_action action_context btn btn-primary']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 3\"",
+            "Parameter Value": "\"BUTTON[onclick='return GlideList2.get('incident').action('c9ce66b4d703120060faef637e610334', 'sysverb_new');']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 4\"",
+            "Parameter Value": "\"BUTTON[id='sysverb_new']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 5\"",
+            "Parameter Value": "\"BUTTON[value='sysverb_new']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 6\"",
+            "Parameter Value": "\"BUTTON[gsft_id='c9ce66b4d703120060faef637e610334']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 7\"",
+            "Parameter Value": "\"BUTTON[gsft_condition='true']\""
+          }
+        ],
+        "v_ClickButton": "Left",
+        "v_ClickType": "Mouse Click",
+        "v_OpenLinkOptions": "Same Tab",
+        "v_NewInstanceName": null,
+        "v_XAdjustment": "0",
+        "v_YAdjustment": "0",
+        "v_Timeout": "30",
+        "CommandID": "c8c804e5-506d-45ad-8362-10dc8d8755f3",
+        "CommandName": "NativeBrowserClickElementCommand",
+        "SelectionName": "Native Browser Click Element",
+        "LineNumber": 4,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    }
+  ],
+  "Variables": [
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "BrowserInstance",
+      "VariableType": "OpenBots.Core.Model.ApplicationModel.OBAppInstance, OpenBots.Core, Version=1.6.1.0, Culture=neutral, PublicKeyToken=null",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "ProjectPath",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": "\"Value Provided at Runtime\""
+    }
+  ],
+  "Arguments": [],
+  "Elements": [],
+  "ImportedNamespaces": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.List`1[[OpenBots.Core.Script.AssemblyReference, OpenBots.Core]], mscorlib]], mscorlib",
+    "Microsoft.Office.Interop.Outlook": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "Microsoft.Office.Interop.Outlook",
+        "AssemblyVersion": "15.0.0.0"
+      }
+    ],
+    "MimeKit": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "MimeKit",
+        "AssemblyVersion": "2.14.0.0"
+      }
+    ],
+    "OpenBots.Core.Model.ApplicationModel": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "OpenBots.Core",
+        "AssemblyVersion": "1.6.1.0"
+      }
+    ],
+    "System": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Collections.Generic": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Data": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Data",
+        "AssemblyVersion": "4.0.0.0"
+      },
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Data.DataSetExtensions",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Drawing": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Drawing",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Linq": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Core",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Security": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Text": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Text.RegularExpressions": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Threading.Tasks": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Windows.Forms": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Windows.Forms",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ]
+  },
+  "Version": "1.6.1.0"
+}

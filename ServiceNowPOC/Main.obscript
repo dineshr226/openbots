@@ -12,7 +12,7 @@
         "CommandName": "RunTaskCommand",
         "SelectionName": "Run Task",
         "LineNumber": 1,
-        "IsCommented": true,
+        "IsCommented": false,
         "PauseBeforeExecution": false,
         "CommandEnabled": true,
         "ScopeStartCommand": false,
@@ -26,17 +26,17 @@
       "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
       "ScriptCommand": {
         "$type": "OpenBots.Commands.Core.Task.RunTaskCommand, OpenBots.Commands.Core",
-        "v_TaskPath": "ProjectPath + @\"\\PDF\\ExtractPDFData.obscript\"",
+        "v_TaskPath": "ProjectPath + @\"\\ServiceNow\\ServiceNow_Login.obscript\"",
         "v_AssignArguments": true,
         "v_ArgumentAssignments": [
           {
-            "ArgumentName": "Out_ServiceDetailsDict",
-            "ArgumentType": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
-            "ArgumentValue": "ServiceDetailsDict",
+            "ArgumentName": "out_BrowserInstance",
+            "ArgumentType": "OpenBots.Core.Model.ApplicationModel.OBAppInstance, OpenBots.Core, Version=1.6.1.0, Culture=neutral, PublicKeyToken=null",
+            "ArgumentValue": "BrowserInstance",
             "ArgumentDirection": "Out"
           }
         ],
-        "CommandID": "c5573e33-c985-4f5c-a4a3-82176bd42603",
+        "CommandID": "388634ad-f90a-4af4-91bb-9121ae026b70",
         "CommandName": "RunTaskCommand",
         "SelectionName": "Run Task",
         "LineNumber": 2,
@@ -54,14 +54,21 @@
       "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
       "ScriptCommand": {
         "$type": "OpenBots.Commands.Core.Task.RunTaskCommand, OpenBots.Commands.Core",
-        "v_TaskPath": "ProjectPath + @\"\\ServiceNow\\ServiceNow_Login.obscript\"",
-        "v_AssignArguments": false,
-        "v_ArgumentAssignments": [],
-        "CommandID": "388634ad-f90a-4af4-91bb-9121ae026b70",
+        "v_TaskPath": "ProjectPath + @\"\\Utilities\\CloseApplicaion.obscript\"",
+        "v_AssignArguments": true,
+        "v_ArgumentAssignments": [
+          {
+            "ArgumentName": "in_BrowserInstance",
+            "ArgumentType": "OpenBots.Core.Model.ApplicationModel.OBAppInstance, OpenBots.Core, Version=1.6.1.0, Culture=neutral, PublicKeyToken=null",
+            "ArgumentValue": "BrowserInstance",
+            "ArgumentDirection": "In"
+          }
+        ],
+        "CommandID": "02f6ba34-3834-47a8-bdc9-e43a85d026e1",
         "CommandName": "RunTaskCommand",
         "SelectionName": "Run Task",
         "LineNumber": 3,
-        "IsCommented": false,
+        "IsCommented": true,
         "PauseBeforeExecution": false,
         "CommandEnabled": true,
         "ScopeStartCommand": false,
@@ -74,12 +81,12 @@
     {
       "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
       "ScriptCommand": {
-        "$type": "OpenBots.Commands.Core.Misc.ShowMessageCommand, OpenBots.Commands.Core",
-        "v_Message": "\"Login done\"",
-        "v_AutoCloseAfter": "0",
-        "CommandID": "79902720-ce22-4ec8-9430-52520504e0a2",
-        "CommandName": "ShowMessageCommand",
-        "SelectionName": "Show Message",
+        "$type": "OpenBots.Commands.SystemAutomation.File.GetFilesCommand, OpenBots.Commands.SystemAutomation",
+        "v_SourceFolderPath": "ProjectPath + @\"\\Input PDF\"",
+        "v_OutputUserVariableName": "InputFiles",
+        "CommandID": "cb7f4dc2-2468-424c-9651-c3d462ef1b10",
+        "CommandName": "GetFilesCommand",
+        "SelectionName": "Get Files",
         "LineNumber": 4,
         "IsCommented": false,
         "PauseBeforeExecution": false,
@@ -94,44 +101,160 @@
     {
       "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
       "ScriptCommand": {
-        "$type": "OpenBots.Commands.Core.Task.RunTaskCommand, OpenBots.Commands.Core",
-        "v_TaskPath": "ProjectPath + @\"\\ServiceNow\\ServiceNow_UpdateDetails.obscript\"",
-        "v_AssignArguments": true,
-        "v_ArgumentAssignments": [
-          {
-            "ArgumentName": "in_ServiceDetailDict",
-            "ArgumentType": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
-            "ArgumentValue": "ServiceDetailsDict",
-            "ArgumentDirection": "In"
-          }
-        ],
-        "CommandID": "0350f8ad-f49f-4af0-a388-867ac5bb0831",
-        "CommandName": "RunTaskCommand",
-        "SelectionName": "Run Task",
+        "$type": "OpenBots.Commands.Core.Loop.BeginForEachCommand, OpenBots.Commands.Core",
+        "v_LoopParameter": "InputFiles",
+        "v_OutputUserVariableName": "CurrentFile",
+        "CommandID": "91ef1f9e-1302-4bf4-9abd-5cc00429c8cc",
+        "CommandName": "BeginForEachCommand",
+        "SelectionName": "For Each",
         "LineNumber": 5,
         "IsCommented": false,
         "PauseBeforeExecution": false,
         "CommandEnabled": true,
-        "ScopeStartCommand": false,
+        "ScopeStartCommand": true,
         "v_IsPrivate": false,
         "v_ErrorHandling": "None",
         "v_Comment": null
       },
-      "AdditionalScriptCommands": null
+      "AdditionalScriptCommands": [
+        {
+          "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+          "ScriptCommand": {
+            "$type": "OpenBots.Commands.Core.Misc.AddCodeCommentCommand, OpenBots.Commands.Core",
+            "CommandID": "eeab568a-48df-4a75-a5ed-849c523919c2",
+            "CommandName": "AddCodeCommentCommand",
+            "SelectionName": "Add Code Comment",
+            "LineNumber": 6,
+            "IsCommented": false,
+            "PauseBeforeExecution": false,
+            "CommandEnabled": true,
+            "ScopeStartCommand": false,
+            "v_IsPrivate": false,
+            "v_ErrorHandling": "None",
+            "v_Comment": "Items in this section will run within the loop"
+          },
+          "AdditionalScriptCommands": null
+        },
+        {
+          "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+          "ScriptCommand": {
+            "$type": "OpenBots.Commands.Core.Task.RunTaskCommand, OpenBots.Commands.Core",
+            "v_TaskPath": "ProjectPath + @\"\\PDF\\ExtractPDFData.obscript\"",
+            "v_AssignArguments": true,
+            "v_ArgumentAssignments": [
+              {
+                "ArgumentName": "Out_ServiceDetailsDict",
+                "ArgumentType": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "ArgumentValue": "ServiceDetailsDict",
+                "ArgumentDirection": "Out"
+              },
+              {
+                "ArgumentName": "InputFilePath",
+                "ArgumentType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "ArgumentValue": "CurrentFile",
+                "ArgumentDirection": "In"
+              }
+            ],
+            "CommandID": "c5573e33-c985-4f5c-a4a3-82176bd42603",
+            "CommandName": "RunTaskCommand",
+            "SelectionName": "Run Task",
+            "LineNumber": 7,
+            "IsCommented": false,
+            "PauseBeforeExecution": false,
+            "CommandEnabled": true,
+            "ScopeStartCommand": false,
+            "v_IsPrivate": false,
+            "v_ErrorHandling": "None",
+            "v_Comment": null
+          },
+          "AdditionalScriptCommands": null
+        },
+        {
+          "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+          "ScriptCommand": {
+            "$type": "OpenBots.Commands.Core.Task.RunTaskCommand, OpenBots.Commands.Core",
+            "v_TaskPath": "ProjectPath + @\"\\ServiceNow\\ServiceNow_UpdateDetails.obscript\"",
+            "v_AssignArguments": true,
+            "v_ArgumentAssignments": [
+              {
+                "ArgumentName": "in_ServiceDetailDict",
+                "ArgumentType": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "ArgumentValue": "ServiceDetailsDict",
+                "ArgumentDirection": "In"
+              },
+              {
+                "ArgumentName": "in_BrowserInstance",
+                "ArgumentType": "OpenBots.Core.Model.ApplicationModel.OBAppInstance, OpenBots.Core, Version=1.6.1.0, Culture=neutral, PublicKeyToken=null",
+                "ArgumentValue": "BrowserInstance",
+                "ArgumentDirection": "In"
+              }
+            ],
+            "CommandID": "0350f8ad-f49f-4af0-a388-867ac5bb0831",
+            "CommandName": "RunTaskCommand",
+            "SelectionName": "Run Task",
+            "LineNumber": 8,
+            "IsCommented": false,
+            "PauseBeforeExecution": false,
+            "CommandEnabled": true,
+            "ScopeStartCommand": false,
+            "v_IsPrivate": false,
+            "v_ErrorHandling": "None",
+            "v_Comment": null
+          },
+          "AdditionalScriptCommands": null
+        },
+        {
+          "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+          "ScriptCommand": {
+            "$type": "OpenBots.Commands.Core.Loop.EndLoopCommand, OpenBots.Commands.Core",
+            "LoopType": "For Each",
+            "CommandID": "9726f5bb-ff30-4602-b347-f1b4a5e716f4",
+            "CommandName": "EndLoopCommand",
+            "SelectionName": "End Loop",
+            "LineNumber": 9,
+            "IsCommented": false,
+            "PauseBeforeExecution": false,
+            "CommandEnabled": true,
+            "ScopeStartCommand": false,
+            "v_IsPrivate": false,
+            "v_ErrorHandling": "None",
+            "v_Comment": null
+          },
+          "AdditionalScriptCommands": null
+        }
+      ]
     }
   ],
   "Variables": [
     {
       "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
-      "VariableName": "ProjectPath",
+      "VariableName": "CurrentFile",
       "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
-      "VariableValue": "\"Value Provided at Runtime\""
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "InputFiles",
+      "VariableType": "System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
     },
     {
       "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
       "VariableName": "ServiceDetailsDict",
       "VariableType": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "BrowserInstance",
+      "VariableType": "OpenBots.Core.Model.ApplicationModel.OBAppInstance, OpenBots.Core, Version=1.6.1.0, Culture=neutral, PublicKeyToken=null",
       "VariableValue": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "ProjectPath",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": "\"Value Provided at Runtime\""
     }
   ],
   "Arguments": [],

@@ -776,6 +776,46 @@
           {
             "Keys": "\"ServiceStartDate\"",
             "Values": "ServiceStartDate"
+          },
+          {
+            "Keys": "\"Address\"",
+            "Values": "Address"
+          },
+          {
+            "Keys": "\"ClientType\"",
+            "Values": "ClientType"
+          },
+          {
+            "Keys": "\"CompanySupport\"",
+            "Values": "CompanySupport"
+          },
+          {
+            "Keys": "\"ContactEmail\"",
+            "Values": "ContactEmail"
+          },
+          {
+            "Keys": "\"Name\"",
+            "Values": "Name"
+          },
+          {
+            "Keys": "\"PaymentDate\"",
+            "Values": "PaymentDate"
+          },
+          {
+            "Keys": "\"PaymentMode\"",
+            "Values": "PaymentMode"
+          },
+          {
+            "Keys": "\"Title\"",
+            "Values": "Title"
+          },
+          {
+            "Keys": "\"TotalPayment\"",
+            "Values": "TotalPayment"
+          },
+          {
+            "Keys": "\"URL\"",
+            "Values": "URL"
           }
         ],
         "v_OutputUserVariableName": "ServiceDetailsDict",
@@ -897,12 +937,6 @@
     },
     {
       "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
-      "VariableName": "ProjectPath",
-      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
-      "VariableValue": "\"Value Provided at Runtime\""
-    },
-    {
-      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
       "VariableName": "ServiceDetailsDict",
       "VariableType": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
       "VariableValue": ""
@@ -942,6 +976,12 @@
       "VariableName": "URL",
       "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
       "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "ProjectPath",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": "\"Value Provided at Runtime\""
     }
   ],
   "Arguments": [
@@ -951,6 +991,14 @@
       "ArgumentType": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
       "ArgumentValue": null,
       "Direction": 1,
+      "AssignedVariable": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptArgument, OpenBots.Core",
+      "ArgumentName": "InputFilePath",
+      "ArgumentType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "ArgumentValue": null,
+      "Direction": 0,
       "AssignedVariable": null
     }
   ],

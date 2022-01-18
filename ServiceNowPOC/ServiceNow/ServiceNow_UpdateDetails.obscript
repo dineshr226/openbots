@@ -26,28 +26,633 @@
     {
       "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
       "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserClickElementCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "BrowserInstance",
+        "v_NativeSearchParameters": [
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"XPath\"",
+            "Parameter Value": "\"/html/body/div[5]/div/div/nav/div/div[3]/div/div/concourse-application-tree/ul/li[1]/ul/li[10]/div/div/a/div/div\""
+          },
+          {
+            "Enabled": null,
+            "Parameter Name": "\"Relative XPath\"",
+            "Parameter Value": "\"//a[@id='087800c1c0a80164004e32c8a64a97c9']//div[@class='sn-widget-list-content']//div[@class='sn-widget-list-title'][normalize-space()='Incidents']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"ID\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Name\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Tag Name\"",
+            "Parameter Value": "\"DIV\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Class Name\"",
+            "Parameter Value": "\"sn-widget-list-title\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Link Text\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector\"",
+            "Parameter Value": "\"a#\\30 87800c1c0a80164004e32c8a64a97c9 > div > div\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 1\"",
+            "Parameter Value": "\"DIV[class='sn-widget-list-title']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 2\"",
+            "Parameter Value": "\"DIV[data-tooltip-overflow-only-text='true']\""
+          }
+        ],
+        "v_ClickButton": "Left",
+        "v_ClickType": "Mouse Click",
+        "v_OpenLinkOptions": "Same Tab",
+        "v_NewInstanceName": null,
+        "v_XAdjustment": "0",
+        "v_YAdjustment": "0",
+        "v_Timeout": "30",
+        "CommandID": "0a577cfc-df50-4085-9157-55686ce403ee",
+        "CommandName": "NativeBrowserClickElementCommand",
+        "SelectionName": "Native Browser Click Element",
+        "LineNumber": 2,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserElementExistsCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "BrowserInstance",
+        "v_NativeSearchParameters": [
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"XPath\"",
+            "Parameter Value": "\"/html/body/div[1]/div[1]/span/div/div[1]/div/div[1]/button[2]\""
+          },
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"Relative XPath\"",
+            "Parameter Value": "\"//button[normalize-space()='New']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"ID\"",
+            "Parameter Value": "\"sysverb_new\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Name\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Tag Name\"",
+            "Parameter Value": "\"BUTTON\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Class Name\"",
+            "Parameter Value": "\"selected_action action_context btn btn-primary\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Link Text\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector\"",
+            "Parameter Value": "\"button#sysverb_new\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 1\"",
+            "Parameter Value": "\"BUTTON[type='submit']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 2\"",
+            "Parameter Value": "\"BUTTON[class='selected_action action_context btn btn-primary']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 3\"",
+            "Parameter Value": "\"BUTTON[onclick='return GlideList2.get('incident').action('c9ce66b4d703120060faef637e610334', 'sysverb_new');']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 4\"",
+            "Parameter Value": "\"BUTTON[id='sysverb_new']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 5\"",
+            "Parameter Value": "\"BUTTON[value='sysverb_new']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 6\"",
+            "Parameter Value": "\"BUTTON[gsft_id='c9ce66b4d703120060faef637e610334']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 7\"",
+            "Parameter Value": "\"BUTTON[gsft_condition='true']\""
+          }
+        ],
+        "v_Timeout": "30",
+        "v_OutputUserVariableName": "NewIncidentPageOpen",
+        "CommandID": "510169a2-bcf5-4ced-b8c0-79565675bd25",
+        "CommandName": "NativeBrowserElementExistsCommand",
+        "SelectionName": "Native Browser Element Exists",
+        "LineNumber": 3,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.Misc.ShowMessageCommand, OpenBots.Commands.Core",
+        "v_Message": "\"Updatd\"",
+        "v_AutoCloseAfter": "0",
+        "CommandID": "89e0076b-871f-493b-89d3-5ad6c44273c7",
+        "CommandName": "ShowMessageCommand",
+        "SelectionName": "Show Message",
+        "LineNumber": 4,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserClickElementCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "BrowserInstance",
+        "v_NativeSearchParameters": [
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"XPath\"",
+            "Parameter Value": "\"/html/body/div[1]/div[1]/span/div/div[1]/div/div[1]/button[2]\""
+          },
+          {
+            "Enabled": null,
+            "Parameter Name": "\"Relative XPath\"",
+            "Parameter Value": "\"//button[normalize-space()='New']\""
+          },
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"ID\"",
+            "Parameter Value": "\"sysverb_new\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Name\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"Tag Name\"",
+            "Parameter Value": "\"BUTTON\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Class Name\"",
+            "Parameter Value": "\"selected_action action_context btn btn-primary\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Link Text\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"CSS Selector\"",
+            "Parameter Value": "\"button#sysverb_new\""
+          },
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"CSS Selector 1\"",
+            "Parameter Value": "\"BUTTON[type='submit']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 2\"",
+            "Parameter Value": "\"BUTTON[class='selected_action action_context btn btn-primary']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 3\"",
+            "Parameter Value": "\"BUTTON[onclick='return GlideList2.get('incident').action('c9ce66b4d703120060faef637e610334', 'sysverb_new');']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 4\"",
+            "Parameter Value": "\"BUTTON[id='sysverb_new']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 5\"",
+            "Parameter Value": "\"BUTTON[value='sysverb_new']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 6\"",
+            "Parameter Value": "\"BUTTON[gsft_id='c9ce66b4d703120060faef637e610334']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 7\"",
+            "Parameter Value": "\"BUTTON[gsft_condition='true']\""
+          }
+        ],
+        "v_ClickButton": "Left",
+        "v_ClickType": "Mouse Click",
+        "v_OpenLinkOptions": "Same Tab",
+        "v_NewInstanceName": null,
+        "v_XAdjustment": "300",
+        "v_YAdjustment": "0",
+        "v_Timeout": "30",
+        "CommandID": "669382a8-4409-4273-96a1-55f9fb59883a",
+        "CommandName": "NativeBrowserClickElementCommand",
+        "SelectionName": "Native Browser Click Element",
+        "LineNumber": 5,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.Misc.ShowMessageCommand, OpenBots.Commands.Core",
+        "v_Message": "\"Updatd\"",
+        "v_AutoCloseAfter": "0",
+        "CommandID": "24d1e0a3-a239-43af-b5c2-0ebcde5ba6f4",
+        "CommandName": "ShowMessageCommand",
+        "SelectionName": "Show Message",
+        "LineNumber": 6,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserElementExistsCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "BrowserInstance",
+        "v_NativeSearchParameters": [
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"XPath\"",
+            "Parameter Value": "\"/html/body/div[1]/span/span/nav/div/div[1]/h1/div[2]\""
+          },
+          {
+            "Enabled": null,
+            "Parameter Name": "\"Relative XPath\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"ID\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Name\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Tag Name\"",
+            "Parameter Value": "\"DIV\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Class Name\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Link Text\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector\"",
+            "Parameter Value": "\"span#section-4fc4979ec0a8016401e142a5a0c599ce\\2e header > nav > div > div.navbar-header > h1 > div:nth-child(3)\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 1\"",
+            "Parameter Value": "\"DIV[style='font-weight: normal;']\""
+          }
+        ],
+        "v_Timeout": "30",
+        "v_OutputUserVariableName": "NewIncidentPageOpen",
+        "CommandID": "b558f3f1-1fba-44d8-ae0e-03e79d587e85",
+        "CommandName": "NativeBrowserElementExistsCommand",
+        "SelectionName": "Native Browser Element Exists",
+        "LineNumber": 7,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.Misc.ShowMessageCommand, OpenBots.Commands.Core",
+        "v_Message": "\"Updatd\"",
+        "v_AutoCloseAfter": "0",
+        "CommandID": "c62baa63-8d2b-4e6c-8846-15848ac825ad",
+        "CommandName": "ShowMessageCommand",
+        "SelectionName": "Show Message",
+        "LineNumber": 8,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
         "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserSetTextCommand, OpenBots.Commands.UIAutomation",
         "v_InstanceName": "BrowserInstance",
         "v_NativeSearchParameters": [
           {
             "Enabled": "True",
             "Parameter Name": "\"XPath\"",
-            "Parameter Value": "\"/html/body/div[2]/form/span[1]/span/div[5]/div/div[1]/div[2]/div[2]/input\""
+            "Parameter Value": "\"/html/body/div[2]/form/span[1]/span/div[5]/div[2]/div/div[1]/div[2]/input[3]\""
           },
           {
             "Enabled": null,
             "Parameter Name": "\"Relative XPath\"",
-            "Parameter Value": "\"//input[@id='sys_app_module.u_string_2']\""
+            "Parameter Value": "\"//input[@id='incident.short_description']\""
           },
           {
             "Enabled": "False",
             "Parameter Name": "\"ID\"",
-            "Parameter Value": "\"sys_app_module.u_string_2\""
+            "Parameter Value": "\"incident.short_description\""
           },
           {
             "Enabled": "False",
             "Parameter Name": "\"Name\"",
-            "Parameter Value": "\"sys_app_module.u_string_2\""
+            "Parameter Value": "\"incident.short_description\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Tag Name\"",
+            "Parameter Value": "\"INPUT\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Class Name\"",
+            "Parameter Value": "\"form-control\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Link Text\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector\"",
+            "Parameter Value": "\"input#incident\\2e short_description\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 1\"",
+            "Parameter Value": "\"INPUT[id='incident.short_description']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 2\"",
+            "Parameter Value": "\"INPUT[name='incident.short_description']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 3\"",
+            "Parameter Value": "\"INPUT[autocomplete='off']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 4\"",
+            "Parameter Value": "\"INPUT[maxlength='160']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 5\"",
+            "Parameter Value": "\"INPUT[data-type='pick_list']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 6\"",
+            "Parameter Value": "\"INPUT[data-ref='incident.short_description']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 7\"",
+            "Parameter Value": "\"INPUT[data-dependent='null']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 8\"",
+            "Parameter Value": "\"INPUT[onchange='onChange('incident.short_description');']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 9\"",
+            "Parameter Value": "\"INPUT[aria-required='true']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 10\"",
+            "Parameter Value": "\"INPUT[class='form-control']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 11\"",
+            "Parameter Value": "\"INPUT[mandatory='true']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 12\"",
+            "Parameter Value": "\"INPUT[aria-label='Short description']\""
+          }
+        ],
+        "v_ClearOption": "Yes",
+        "v_SimulateType": "Yes",
+        "v_TextToSet": "\"Test short description\"",
+        "v_Timeout": "30",
+        "CommandID": "a0a90bec-4c4d-4588-8c2c-387ef51ef13f",
+        "CommandName": "NativeBrowserSetTextCommand",
+        "SelectionName": "Native Browser Set Text",
+        "LineNumber": 9,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserClickElementCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "BrowserInstance",
+        "v_NativeSearchParameters": [
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"XPath\"",
+            "Parameter Value": "\"/html/body/div[2]/form/div[1]/span[1]/span[1]/span[2]\""
+          },
+          {
+            "Enabled": null,
+            "Parameter Name": "\"Relative XPath\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"ID\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Name\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Tag Name\"",
+            "Parameter Value": "\"SPAN\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Class Name\"",
+            "Parameter Value": "\"tab_caption_text\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Link Text\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector\"",
+            "Parameter Value": "\"div#tabs2_section > span:nth-child(1) > span.tabs2_tab.default-focus-outline.tabs2_hover.tabs2_active > span.tab_caption_text\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 1\"",
+            "Parameter Value": "\"SPAN[class='tab_caption_text']\""
+          }
+        ],
+        "v_ClickButton": "Left",
+        "v_ClickType": "Mouse Click",
+        "v_OpenLinkOptions": "Same Tab",
+        "v_NewInstanceName": null,
+        "v_XAdjustment": "0",
+        "v_YAdjustment": "0",
+        "v_Timeout": "30",
+        "CommandID": "05c9aa6c-a6a4-475c-9c3b-0c82bdfe2778",
+        "CommandName": "NativeBrowserClickElementCommand",
+        "SelectionName": "Native Browser Click Element",
+        "LineNumber": 10,
+        "IsCommented": true,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserSetTextCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "BrowserInstance",
+        "v_NativeSearchParameters": [
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"XPath\"",
+            "Parameter Value": "\"/html/body/div[2]/form/span[2]/span/div/div/div[2]/div[1]/div[2]/input\""
+          },
+          {
+            "Enabled": null,
+            "Parameter Name": "\"Relative XPath\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"ID\"",
+            "Parameter Value": "\"incident.u_string_1\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Name\"",
+            "Parameter Value": "\"incident.u_string_1\""
           },
           {
             "Enabled": "False",
@@ -67,7 +672,7 @@
           {
             "Enabled": "False",
             "Parameter Name": "\"CSS Selector\"",
-            "Parameter Value": "\"input#sys_app_module\\2e u_string_2\""
+            "Parameter Value": "\"input#incident\\2e u_string_1\""
           },
           {
             "Enabled": "False",
@@ -82,12 +687,12 @@
           {
             "Enabled": "False",
             "Parameter Name": "\"CSS Selector 3\"",
-            "Parameter Value": "\"INPUT[id='sys_app_module.u_string_2']\""
+            "Parameter Value": "\"INPUT[id='incident.u_string_1']\""
           },
           {
             "Enabled": "False",
             "Parameter Name": "\"CSS Selector 4\"",
-            "Parameter Value": "\"INPUT[name='sys_app_module.u_string_2']\""
+            "Parameter Value": "\"INPUT[name='incident.u_string_1']\""
           },
           {
             "Enabled": "False",
@@ -97,7 +702,7 @@
           {
             "Enabled": "False",
             "Parameter Name": "\"CSS Selector 6\"",
-            "Parameter Value": "\"INPUT[onchange='onChange('sys_app_module.u_string_2');']\""
+            "Parameter Value": "\"INPUT[onchange='onChange('incident.u_string_1');']\""
           },
           {
             "Enabled": "False",
@@ -122,7 +727,7 @@
           {
             "Enabled": "False",
             "Parameter Name": "\"CSS Selector 11\"",
-            "Parameter Value": "\"INPUT[aria-label='Company Type']\""
+            "Parameter Value": "\"INPUT[aria-label='Company Name']\""
           }
         ],
         "v_ClearOption": "Yes",
@@ -132,7 +737,935 @@
         "CommandID": "b71b2963-4c12-4e33-b15b-5ae49da6257a",
         "CommandName": "NativeBrowserSetTextCommand",
         "SelectionName": "Native Browser Set Text",
-        "LineNumber": 2,
+        "LineNumber": 11,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserSetTextCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "BrowserInstance",
+        "v_NativeSearchParameters": [
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"XPath\"",
+            "Parameter Value": "\"/html/body/div[2]/form/span[2]/span/div/div/div[1]/div[6]/div[2]/input\""
+          },
+          {
+            "Enabled": null,
+            "Parameter Name": "\"Relative XPath\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"ID\"",
+            "Parameter Value": "\"incident.u_string_11\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Name\"",
+            "Parameter Value": "\"incident.u_string_11\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Tag Name\"",
+            "Parameter Value": "\"INPUT\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Class Name\"",
+            "Parameter Value": "\"form-control \""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Link Text\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector\"",
+            "Parameter Value": "\"input#incident\\2e u_string_11\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 1\"",
+            "Parameter Value": "\"INPUT[type='text']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 2\"",
+            "Parameter Value": "\"INPUT[data-type='string']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 3\"",
+            "Parameter Value": "\"INPUT[id='incident.u_string_11']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 4\"",
+            "Parameter Value": "\"INPUT[name='incident.u_string_11']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 5\"",
+            "Parameter Value": "\"INPUT[aria-required='false']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 6\"",
+            "Parameter Value": "\"INPUT[onchange='onChange('incident.u_string_11');']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 7\"",
+            "Parameter Value": "\"INPUT[maxlength='40']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 8\"",
+            "Parameter Value": "\"INPUT[autocomplete='off']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 9\"",
+            "Parameter Value": "\"INPUT[class='form-control ']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 10\"",
+            "Parameter Value": "\"INPUT[spellcheck='false']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 11\"",
+            "Parameter Value": "\"INPUT[aria-label='Client Type']\""
+          }
+        ],
+        "v_ClearOption": "Yes",
+        "v_SimulateType": "Yes",
+        "v_TextToSet": "in_ServiceDetailDict[\"ClientType\"].ToString()",
+        "v_Timeout": "30",
+        "CommandID": "7a4d4094-e3b5-4226-96b7-f254bbdc65f2",
+        "CommandName": "NativeBrowserSetTextCommand",
+        "SelectionName": "Native Browser Set Text",
+        "LineNumber": 12,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserSetTextCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "BrowserInstance",
+        "v_NativeSearchParameters": [
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"XPath\"",
+            "Parameter Value": "\"/html/body/div[2]/form/span[2]/span/div/div/div[2]/div[3]/div[2]/input\""
+          },
+          {
+            "Enabled": null,
+            "Parameter Name": "\"Relative XPath\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"ID\"",
+            "Parameter Value": "\"incident.u_string_6\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Name\"",
+            "Parameter Value": "\"incident.u_string_6\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Tag Name\"",
+            "Parameter Value": "\"INPUT\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Class Name\"",
+            "Parameter Value": "\"form-control \""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Link Text\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector\"",
+            "Parameter Value": "\"input#incident\\2e u_string_6\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 1\"",
+            "Parameter Value": "\"INPUT[type='text']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 2\"",
+            "Parameter Value": "\"INPUT[data-type='string']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 3\"",
+            "Parameter Value": "\"INPUT[id='incident.u_string_6']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 4\"",
+            "Parameter Value": "\"INPUT[name='incident.u_string_6']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 5\"",
+            "Parameter Value": "\"INPUT[aria-required='false']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 6\"",
+            "Parameter Value": "\"INPUT[onchange='onChange('incident.u_string_6');']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 7\"",
+            "Parameter Value": "\"INPUT[maxlength='40']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 8\"",
+            "Parameter Value": "\"INPUT[autocomplete='off']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 9\"",
+            "Parameter Value": "\"INPUT[class='form-control ']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 10\"",
+            "Parameter Value": "\"INPUT[spellcheck='false']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 11\"",
+            "Parameter Value": "\"INPUT[aria-label='Company Contact Person EmailId']\""
+          }
+        ],
+        "v_ClearOption": "Yes",
+        "v_SimulateType": "Yes",
+        "v_TextToSet": "in_ServiceDetailDict[\"CompanySupport\"].ToString()",
+        "v_Timeout": "30",
+        "CommandID": "11cfc575-9c89-4ea7-8b74-332a43f34f22",
+        "CommandName": "NativeBrowserSetTextCommand",
+        "SelectionName": "Native Browser Set Text",
+        "LineNumber": 13,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserSetTextCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "BrowserInstance",
+        "v_NativeSearchParameters": [
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"XPath\"",
+            "Parameter Value": "\"/html/body/div[2]/form/span[2]/span/div/div/div[1]/div[8]/div[2]/input\""
+          },
+          {
+            "Enabled": null,
+            "Parameter Name": "\"Relative XPath\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"ID\"",
+            "Parameter Value": "\"incident.u_string_15\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Name\"",
+            "Parameter Value": "\"incident.u_string_15\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Tag Name\"",
+            "Parameter Value": "\"INPUT\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Class Name\"",
+            "Parameter Value": "\"form-control \""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Link Text\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector\"",
+            "Parameter Value": "\"input#incident\\2e u_string_15\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 1\"",
+            "Parameter Value": "\"INPUT[type='text']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 2\"",
+            "Parameter Value": "\"INPUT[data-type='string']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 3\"",
+            "Parameter Value": "\"INPUT[id='incident.u_string_15']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 4\"",
+            "Parameter Value": "\"INPUT[name='incident.u_string_15']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 5\"",
+            "Parameter Value": "\"INPUT[aria-required='false']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 6\"",
+            "Parameter Value": "\"INPUT[onchange='onChange('incident.u_string_15');']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 7\"",
+            "Parameter Value": "\"INPUT[maxlength='40']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 8\"",
+            "Parameter Value": "\"INPUT[autocomplete='off']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 9\"",
+            "Parameter Value": "\"INPUT[class='form-control ']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 10\"",
+            "Parameter Value": "\"INPUT[spellcheck='false']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 11\"",
+            "Parameter Value": "\"INPUT[aria-label='SOW Number']\""
+          }
+        ],
+        "v_ClearOption": "Yes",
+        "v_SimulateType": "Yes",
+        "v_TextToSet": "in_ServiceDetailDict[\"SOW\"].ToString()",
+        "v_Timeout": "30",
+        "CommandID": "90fe6a9a-caae-491d-aefe-66502433c07b",
+        "CommandName": "NativeBrowserSetTextCommand",
+        "SelectionName": "Native Browser Set Text",
+        "LineNumber": 14,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserSetTextCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "BrowserInstance",
+        "v_NativeSearchParameters": [
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"XPath\"",
+            "Parameter Value": "\"/html/body/div[2]/form/span[2]/span/div/div/div[1]/div[4]/div[2]/input\""
+          },
+          {
+            "Enabled": null,
+            "Parameter Name": "\"Relative XPath\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"ID\"",
+            "Parameter Value": "\"incident.u_string_7\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Name\"",
+            "Parameter Value": "\"incident.u_string_7\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Tag Name\"",
+            "Parameter Value": "\"INPUT\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Class Name\"",
+            "Parameter Value": "\"form-control \""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Link Text\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector\"",
+            "Parameter Value": "\"input#incident\\2e u_string_7\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 1\"",
+            "Parameter Value": "\"INPUT[type='text']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 2\"",
+            "Parameter Value": "\"INPUT[data-type='string']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 3\"",
+            "Parameter Value": "\"INPUT[id='incident.u_string_7']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 4\"",
+            "Parameter Value": "\"INPUT[name='incident.u_string_7']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 5\"",
+            "Parameter Value": "\"INPUT[aria-required='false']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 6\"",
+            "Parameter Value": "\"INPUT[onchange='onChange('incident.u_string_7');']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 7\"",
+            "Parameter Value": "\"INPUT[maxlength='40']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 8\"",
+            "Parameter Value": "\"INPUT[autocomplete='off']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 9\"",
+            "Parameter Value": "\"INPUT[class='form-control ']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 10\"",
+            "Parameter Value": "\"INPUT[spellcheck='false']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 11\"",
+            "Parameter Value": "\"INPUT[aria-label='Support Mail Id']\""
+          }
+        ],
+        "v_ClearOption": "Yes",
+        "v_SimulateType": "Yes",
+        "v_TextToSet": "in_ServiceDetailDict[\"ContactEmail\"].ToString()",
+        "v_Timeout": "30",
+        "CommandID": "c981fbf2-92b0-4d24-908c-70cfee76ee43",
+        "CommandName": "NativeBrowserSetTextCommand",
+        "SelectionName": "Native Browser Set Text",
+        "LineNumber": 15,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserSetTextCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "BrowserInstance",
+        "v_NativeSearchParameters": [
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"XPath\"",
+            "Parameter Value": "\"/html/body/div[2]/form/span[2]/span/div/div/div[1]/div[5]/div[2]/input\""
+          },
+          {
+            "Enabled": null,
+            "Parameter Name": "\"Relative XPath\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"ID\"",
+            "Parameter Value": "\"incident.u_string_8\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Name\"",
+            "Parameter Value": "\"incident.u_string_8\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Tag Name\"",
+            "Parameter Value": "\"INPUT\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Class Name\"",
+            "Parameter Value": "\"form-control \""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Link Text\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector\"",
+            "Parameter Value": "\"input#incident\\2e u_string_8\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 1\"",
+            "Parameter Value": "\"INPUT[type='text']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 2\"",
+            "Parameter Value": "\"INPUT[data-type='string']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 3\"",
+            "Parameter Value": "\"INPUT[id='incident.u_string_8']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 4\"",
+            "Parameter Value": "\"INPUT[name='incident.u_string_8']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 5\"",
+            "Parameter Value": "\"INPUT[aria-required='false']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 6\"",
+            "Parameter Value": "\"INPUT[onchange='onChange('incident.u_string_8');']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 7\"",
+            "Parameter Value": "\"INPUT[maxlength='40']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 8\"",
+            "Parameter Value": "\"INPUT[autocomplete='off']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 9\"",
+            "Parameter Value": "\"INPUT[class='form-control ']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 10\"",
+            "Parameter Value": "\"INPUT[spellcheck='false']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 11\"",
+            "Parameter Value": "\"INPUT[aria-label='Client Title']\""
+          }
+        ],
+        "v_ClearOption": "Yes",
+        "v_SimulateType": "Yes",
+        "v_TextToSet": "in_ServiceDetailDict[\"Title\"].ToString()",
+        "v_Timeout": "30",
+        "CommandID": "a5fb74b5-e92f-4145-ace5-fa952ec270a1",
+        "CommandName": "NativeBrowserSetTextCommand",
+        "SelectionName": "Native Browser Set Text",
+        "LineNumber": 16,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.Misc.ShowMessageCommand, OpenBots.Commands.Core",
+        "v_Message": "\"Updatd\"",
+        "v_AutoCloseAfter": "0",
+        "CommandID": "ac4ac4fe-f509-4cfb-bdfa-750e781a7a20",
+        "CommandName": "ShowMessageCommand",
+        "SelectionName": "Show Message",
+        "LineNumber": 17,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserClickElementCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "BrowserInstance",
+        "v_NativeSearchParameters": [
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"XPath\"",
+            "Parameter Value": "\"/html/body/div[2]/form/div[1]/span[3]/span[1]/span[2]\""
+          },
+          {
+            "Enabled": null,
+            "Parameter Name": "\"Relative XPath\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"ID\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Name\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Tag Name\"",
+            "Parameter Value": "\"SPAN\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Class Name\"",
+            "Parameter Value": "\"tab_caption_text\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Link Text\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector\"",
+            "Parameter Value": "\"div#tabs2_section > span:nth-child(3) > span.tabs2_tab.default-focus-outline.tabs2_hover.tabs2_active > span.tab_caption_text\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 1\"",
+            "Parameter Value": "\"SPAN[class='tab_caption_text']\""
+          }
+        ],
+        "v_ClickButton": "Left",
+        "v_ClickType": "Mouse Click",
+        "v_OpenLinkOptions": "Same Tab",
+        "v_NewInstanceName": null,
+        "v_XAdjustment": "0",
+        "v_YAdjustment": "0",
+        "v_Timeout": "30",
+        "CommandID": "187455d5-140b-40a8-9384-52f104417929",
+        "CommandName": "NativeBrowserClickElementCommand",
+        "SelectionName": "Native Browser Click Element",
+        "LineNumber": 18,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserSetTextCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "BrowserInstance",
+        "v_NativeSearchParameters": [
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"XPath\"",
+            "Parameter Value": "\"/html/body/div[2]/form/span[4]/span/div/div/div[2]/div/div[2]/input\""
+          },
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"Relative XPath\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"ID\"",
+            "Parameter Value": "\"incident.u_string_23\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Name\"",
+            "Parameter Value": "\"incident.u_string_23\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Tag Name\"",
+            "Parameter Value": "\"INPUT\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Class Name\"",
+            "Parameter Value": "\"form-control \""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Link Text\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector\"",
+            "Parameter Value": "\"input#incident\\2e u_string_23\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 1\"",
+            "Parameter Value": "\"INPUT[type='text']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 2\"",
+            "Parameter Value": "\"INPUT[data-type='string']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 3\"",
+            "Parameter Value": "\"INPUT[id='incident.u_string_23']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 4\"",
+            "Parameter Value": "\"INPUT[name='incident.u_string_23']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 5\"",
+            "Parameter Value": "\"INPUT[aria-required='false']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 6\"",
+            "Parameter Value": "\"INPUT[onchange='onChange('incident.u_string_23');']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 7\"",
+            "Parameter Value": "\"INPUT[maxlength='40']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 8\"",
+            "Parameter Value": "\"INPUT[autocomplete='off']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 9\"",
+            "Parameter Value": "\"INPUT[class='form-control ']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 10\"",
+            "Parameter Value": "\"INPUT[spellcheck='false']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 11\"",
+            "Parameter Value": "\"INPUT[aria-label='Mode of Payment']\""
+          }
+        ],
+        "v_ClearOption": "Yes",
+        "v_SimulateType": "Yes",
+        "v_TextToSet": "in_ServiceDetailDict[\"PaymentMode\"].ToString()",
+        "v_Timeout": "30",
+        "CommandID": "970d4275-b373-41ce-ab72-bbcbc95397e4",
+        "CommandName": "NativeBrowserSetTextCommand",
+        "SelectionName": "Native Browser Set Text",
+        "LineNumber": 19,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserSetTextCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "BrowserInstance",
+        "v_NativeSearchParameters": [
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"XPath\"",
+            "Parameter Value": "\"/html/body/div[2]/form/span[4]/span/div/div/div[1]/div[2]/div[2]/div[2]/input\""
+          },
+          {
+            "Enabled": null,
+            "Parameter Name": "\"Relative XPath\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"ID\"",
+            "Parameter Value": "\"incident.u_price_24.display\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Name\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Tag Name\"",
+            "Parameter Value": "\"INPUT\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Class Name\"",
+            "Parameter Value": "\"decimal form-control\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Link Text\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector\"",
+            "Parameter Value": "\"input#incident\\2e u_price_24\\2e display\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 1\"",
+            "Parameter Value": "\"INPUT[class='decimal form-control']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 2\"",
+            "Parameter Value": "\"INPUT[data-type='glide_element_currency_incident.u_price_24_input']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 3\"",
+            "Parameter Value": "\"INPUT[id='incident.u_price_24.display']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 4\"",
+            "Parameter Value": "\"INPUT[maxlength='14']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 5\"",
+            "Parameter Value": "\"INPUT[value='0.00']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 6\"",
+            "Parameter Value": "\"INPUT[aria-labelledby='label.incident.u_price_24']\""
+          }
+        ],
+        "v_ClearOption": "Yes",
+        "v_SimulateType": "Yes",
+        "v_TextToSet": "in_ServiceDetailDict[\"TotalPayment\"].ToString()",
+        "v_Timeout": "30",
+        "CommandID": "ef1fe49b-2b61-4142-9a52-0ef162272341",
+        "CommandName": "NativeBrowserSetTextCommand",
+        "SelectionName": "Native Browser Set Text",
+        "LineNumber": 20,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.Misc.ShowMessageCommand, OpenBots.Commands.Core",
+        "v_Message": "\"Updatd\"",
+        "v_AutoCloseAfter": "0",
+        "CommandID": "408ce843-7ab7-4089-9bd4-4ba5cbcb7cdf",
+        "CommandName": "ShowMessageCommand",
+        "SelectionName": "Show Message",
+        "LineNumber": 21,
         "IsCommented": false,
         "PauseBeforeExecution": false,
         "CommandEnabled": true,
@@ -153,6 +1686,12 @@
     },
     {
       "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "NewIncidentPageOpen",
+      "VariableType": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
       "VariableName": "ProjectPath",
       "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
       "VariableValue": "\"Value Provided at Runtime\""
@@ -163,6 +1702,14 @@
       "$type": "OpenBots.Core.Script.ScriptArgument, OpenBots.Core",
       "ArgumentName": "in_ServiceDetailDict",
       "ArgumentType": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "ArgumentValue": null,
+      "Direction": 0,
+      "AssignedVariable": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptArgument, OpenBots.Core",
+      "ArgumentName": "in_BrowserInstance",
+      "ArgumentType": "OpenBots.Core.Model.ApplicationModel.OBAppInstance, OpenBots.Core, Version=1.6.1.0, Culture=neutral, PublicKeyToken=null",
       "ArgumentValue": null,
       "Direction": 0,
       "AssignedVariable": null

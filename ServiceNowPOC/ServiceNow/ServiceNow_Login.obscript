@@ -4,250 +4,38 @@
     {
       "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
       "ScriptCommand": {
-        "$type": "OpenBots.Commands.Core.Misc.AddCodeCommentCommand, OpenBots.Commands.Core",
-        "CommandID": "0561bd66-d9ef-47c0-aed9-6d03e88e5c7e",
-        "CommandName": "AddCodeCommentCommand",
-        "SelectionName": "Add Code Comment",
-        "LineNumber": 1,
-        "IsCommented": false,
-        "PauseBeforeExecution": false,
-        "CommandEnabled": true,
-        "ScopeStartCommand": false,
-        "v_IsPrivate": false,
-        "v_ErrorHandling": "None",
-        "v_Comment": "Items in this section will be retried as long as the condition is not met or an error is thrown"
-      },
-      "AdditionalScriptCommands": null
-    },
-    {
-      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
-      "ScriptCommand": {
-        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.NativeBrowserCreateApplicationCommand, OpenBots.Commands.UIAutomation",
-        "v_InstanceName": "BrowserInstance",
-        "v_EngineType": "Chrome",
-        "v_URL": "\"https://dev93682.service-now.com/nav_to.do?uri=%2Fsys_app_module.do%3Fsys_id%3D087800c1c0a80164004e32c8a64a97c9\"",
-        "v_BrowserWindowOption": "Maximize",
-        "CommandID": "c059b9d7-5494-49ed-a611-79a36c702e25",
-        "CommandName": "NativeBrowserCreateApplicationCommand",
-        "SelectionName": "Native Browser Create Application",
-        "LineNumber": 2,
-        "IsCommented": false,
-        "PauseBeforeExecution": false,
-        "CommandEnabled": true,
-        "ScopeStartCommand": false,
-        "v_IsPrivate": false,
-        "v_ErrorHandling": "None",
-        "v_Comment": null
-      },
-      "AdditionalScriptCommands": null
-    },
-    {
-      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
-      "ScriptCommand": {
-        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserElementExistsCommand, OpenBots.Commands.UIAutomation",
-        "v_InstanceName": "BrowserInstance",
-        "v_NativeSearchParameters": [
-          {
-            "Enabled": "True",
-            "Parameter Name": "\"XPath\"",
-            "Parameter Value": "\"/html/body/form/div/div[4]/button\""
-          },
-          {
-            "Enabled": null,
-            "Parameter Name": "\"Relative XPath\"",
-            "Parameter Value": "\"//button[normalize-space()='Log in']\""
-          },
-          {
-            "Enabled": "True",
-            "Parameter Name": "\"ID\"",
-            "Parameter Value": "\"sysverb_login\""
-          },
-          {
-            "Enabled": "False",
-            "Parameter Name": "\"Name\"",
-            "Parameter Value": "\"not_important\""
-          },
-          {
-            "Enabled": "False",
-            "Parameter Name": "\"Tag Name\"",
-            "Parameter Value": "\"BUTTON\""
-          },
-          {
-            "Enabled": "False",
-            "Parameter Name": "\"Class Name\"",
-            "Parameter Value": "\"pull-right btn btn-primary\""
-          },
-          {
-            "Enabled": "False",
-            "Parameter Name": "\"Link Text\"",
-            "Parameter Value": "\"\""
-          },
-          {
-            "Enabled": "False",
-            "Parameter Name": "\"CSS Selector\"",
-            "Parameter Value": "\"button#sysverb_login\""
-          },
-          {
-            "Enabled": "False",
-            "Parameter Name": "\"CSS Selector 1\"",
-            "Parameter Value": "\"BUTTON[name='not_important']\""
-          },
-          {
-            "Enabled": "False",
-            "Parameter Name": "\"CSS Selector 2\"",
-            "Parameter Value": "\"BUTTON[id='sysverb_login']\""
-          },
-          {
-            "Enabled": "False",
-            "Parameter Name": "\"CSS Selector 3\"",
-            "Parameter Value": "\"BUTTON[class='pull-right btn btn-primary']\""
-          },
-          {
-            "Enabled": "False",
-            "Parameter Name": "\"CSS Selector 4\"",
-            "Parameter Value": "\"BUTTON[type='submit']\""
-          },
-          {
-            "Enabled": "False",
-            "Parameter Name": "\"CSS Selector 5\"",
-            "Parameter Value": "\"BUTTON[onclick='loginPage.sys_action.value=this.id;']\""
-          }
-        ],
-        "v_Timeout": "30",
-        "v_OutputUserVariableName": "isBrowserLoaded",
-        "CommandID": "5d493e55-dadd-4c5d-a2a6-83a63c90bdbd",
-        "CommandName": "NativeBrowserElementExistsCommand",
-        "SelectionName": "Native Browser Element Exists",
-        "LineNumber": 3,
-        "IsCommented": false,
-        "PauseBeforeExecution": false,
-        "CommandEnabled": true,
-        "ScopeStartCommand": false,
-        "v_IsPrivate": false,
-        "v_ErrorHandling": "None",
-        "v_Comment": null
-      },
-      "AdditionalScriptCommands": null
-    },
-    {
-      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
-      "ScriptCommand": {
-        "$type": "OpenBots.Commands.Core.If.BeginIfCommand, OpenBots.Commands.Core",
+        "$type": "OpenBots.Commands.Core.ErrorHandling.BeginRetryCommand, OpenBots.Commands.Core",
+        "v_RetryCount": "2",
+        "v_RetryInterval": "10",
         "v_Option": "Inline",
         "v_Condition": "isBrowserLoaded",
-        "v_ActionType": null,
-        "v_ActionParameterTable": [],
-        "CommandID": "3e1d2b68-b5f1-49b4-8f62-574aa9459572",
-        "CommandName": "BeginIfCommand",
-        "SelectionName": "If",
-        "LineNumber": 4,
+        "v_LogicType": "And",
+        "v_IfConditionsTable": [],
+        "CommandID": "acb536f7-01e3-4cbb-891b-f998062c75df",
+        "CommandName": "BeginRetryCommand",
+        "SelectionName": "Retry",
+        "LineNumber": 1,
         "IsCommented": false,
         "PauseBeforeExecution": false,
         "CommandEnabled": true,
         "ScopeStartCommand": true,
         "v_IsPrivate": false,
-        "v_ErrorHandling": "None",
+        "v_ErrorHandling": "Report Error",
         "v_Comment": null
       },
       "AdditionalScriptCommands": [
         {
           "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
           "ScriptCommand": {
-            "$type": "OpenBots.Commands.Core.Misc.AddCodeCommentCommand, OpenBots.Commands.Core",
-            "CommandID": "c206389f-48a0-4cf5-bf15-42e34045b3c0",
-            "CommandName": "AddCodeCommentCommand",
-            "SelectionName": "Add Code Comment",
-            "LineNumber": 5,
-            "IsCommented": false,
-            "PauseBeforeExecution": false,
-            "CommandEnabled": true,
-            "ScopeStartCommand": false,
-            "v_IsPrivate": false,
-            "v_ErrorHandling": "None",
-            "v_Comment": "Items in this section will run if the statement is true"
-          },
-          "AdditionalScriptCommands": null
-        },
-        {
-          "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
-          "ScriptCommand": {
-            "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserSetTextCommand, OpenBots.Commands.UIAutomation",
+            "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.NativeBrowserCreateApplicationCommand, OpenBots.Commands.UIAutomation",
             "v_InstanceName": "BrowserInstance",
-            "v_NativeSearchParameters": [
-              {
-                "Enabled": "True",
-                "Parameter Name": "\"XPath\"",
-                "Parameter Value": "\"/html/body/form/div/div[1]/input\""
-              },
-              {
-                "Enabled": null,
-                "Parameter Name": "\"Relative XPath\"",
-                "Parameter Value": "\"//input[@id='user_name']\""
-              },
-              {
-                "Enabled": "True",
-                "Parameter Name": "\"ID\"",
-                "Parameter Value": "\"user_name\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"Name\"",
-                "Parameter Value": "\"user_name\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"Tag Name\"",
-                "Parameter Value": "\"INPUT\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"Class Name\"",
-                "Parameter Value": "\"form-control\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"Link Text\"",
-                "Parameter Value": "\"\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"CSS Selector\"",
-                "Parameter Value": "\"input#user_name\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"CSS Selector 1\"",
-                "Parameter Value": "\"INPUT[type='text']\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"CSS Selector 2\"",
-                "Parameter Value": "\"INPUT[class='form-control']\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"CSS Selector 3\"",
-                "Parameter Value": "\"INPUT[id='user_name']\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"CSS Selector 4\"",
-                "Parameter Value": "\"INPUT[name='user_name']\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"CSS Selector 5\"",
-                "Parameter Value": "\"INPUT[autocomplete='off']\""
-              }
-            ],
-            "v_ClearOption": "Yes",
-            "v_SimulateType": "Yes",
-            "v_TextToSet": "\"admin\"",
-            "v_Timeout": "30",
-            "CommandID": "081333da-0e2c-4df0-8b84-04d790d3cc26",
-            "CommandName": "NativeBrowserSetTextCommand",
-            "SelectionName": "Native Browser Set Text",
-            "LineNumber": 6,
+            "v_EngineType": "Chrome",
+            "v_URL": "\"https://dev93682.service-now.com/nav_to.do?uri=%2Fsys_app_module.do%3Fsys_id%3D087800c1c0a80164004e32c8a64a97c9\"",
+            "v_BrowserWindowOption": "Maximize",
+            "CommandID": "c059b9d7-5494-49ed-a611-79a36c702e25",
+            "CommandName": "NativeBrowserCreateApplicationCommand",
+            "SelectionName": "Native Browser Create Application",
+            "LineNumber": 2,
             "IsCommented": false,
             "PauseBeforeExecution": false,
             "CommandEnabled": true,
@@ -261,83 +49,13 @@
         {
           "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
           "ScriptCommand": {
-            "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserSetTextCommand, OpenBots.Commands.UIAutomation",
-            "v_InstanceName": "BrowserInstance",
-            "v_NativeSearchParameters": [
-              {
-                "Enabled": "True",
-                "Parameter Name": "\"XPath\"",
-                "Parameter Value": "\"/html/body/form/div/div[2]/input[1]\""
-              },
-              {
-                "Enabled": null,
-                "Parameter Name": "\"Relative XPath\"",
-                "Parameter Value": "\"\""
-              },
-              {
-                "Enabled": "True",
-                "Parameter Name": "\"ID\"",
-                "Parameter Value": "\"user_password\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"Name\"",
-                "Parameter Value": "\"user_password\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"Tag Name\"",
-                "Parameter Value": "\"INPUT\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"Class Name\"",
-                "Parameter Value": "\"form-control\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"Link Text\"",
-                "Parameter Value": "\"\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"CSS Selector\"",
-                "Parameter Value": "\"input#user_password\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"CSS Selector 1\"",
-                "Parameter Value": "\"INPUT[type='password']\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"CSS Selector 2\"",
-                "Parameter Value": "\"INPUT[id='user_password']\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"CSS Selector 3\"",
-                "Parameter Value": "\"INPUT[name='user_password']\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"CSS Selector 4\"",
-                "Parameter Value": "\"INPUT[autocomplete='off']\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"CSS Selector 5\"",
-                "Parameter Value": "\"INPUT[class='form-control']\""
-              }
-            ],
-            "v_ClearOption": "Yes",
-            "v_SimulateType": "Yes",
-            "v_TextToSet": "\"ty8NKDrqfF0C\"",
-            "v_Timeout": "30",
-            "CommandID": "630a10aa-dc68-4d07-815e-3a172f7a04d5",
-            "CommandName": "NativeBrowserSetTextCommand",
-            "SelectionName": "Native Browser Set Text",
-            "LineNumber": 7,
+            "$type": "OpenBots.Commands.Core.Variable.SetVariableCommand, OpenBots.Commands.Core",
+            "v_Input": "BrowserInstance",
+            "v_OutputUserVariableName": "out_BrowserInstance",
+            "CommandID": "6596c8ef-b66e-49db-964e-502607a4aee6",
+            "CommandName": "SetVariableCommand",
+            "SelectionName": "Set Variable",
+            "LineNumber": 3,
             "IsCommented": false,
             "PauseBeforeExecution": false,
             "CommandEnabled": true,
@@ -351,7 +69,7 @@
         {
           "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
           "ScriptCommand": {
-            "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserClickElementCommand, OpenBots.Commands.UIAutomation",
+            "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserElementExistsCommand, OpenBots.Commands.UIAutomation",
             "v_InstanceName": "BrowserInstance",
             "v_NativeSearchParameters": [
               {
@@ -420,90 +138,12 @@
                 "Parameter Value": "\"BUTTON[onclick='loginPage.sys_action.value=this.id;']\""
               }
             ],
-            "v_ClickButton": "Left",
-            "v_ClickType": "Mouse Click",
-            "v_OpenLinkOptions": "Same Tab",
-            "v_NewInstanceName": null,
-            "v_XAdjustment": "0",
-            "v_YAdjustment": "0",
             "v_Timeout": "30",
-            "CommandID": "9b30ecb4-488d-4d11-b74d-e25a47cf3abc",
-            "CommandName": "NativeBrowserClickElementCommand",
-            "SelectionName": "Native Browser Click Element",
-            "LineNumber": 8,
-            "IsCommented": false,
-            "PauseBeforeExecution": false,
-            "CommandEnabled": true,
-            "ScopeStartCommand": false,
-            "v_IsPrivate": false,
-            "v_ErrorHandling": "None",
-            "v_Comment": null
-          },
-          "AdditionalScriptCommands": null
-        },
-        {
-          "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
-          "ScriptCommand": {
-            "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserElementExistsCommand, OpenBots.Commands.UIAutomation",
-            "v_InstanceName": "BrowserInstance",
-            "v_NativeSearchParameters": [
-              {
-                "Enabled": "True",
-                "Parameter Name": "\"XPath\"",
-                "Parameter Value": "\"/html/body/div[5]/div/div/nav/div/div[3]/div/div/concourse-application-tree/ul/li[1]/ul/li[1]/div/div/a/div/div\""
-              },
-              {
-                "Enabled": null,
-                "Parameter Name": "\"Relative XPath\"",
-                "Parameter Value": "\"//a[@id='4aeebcd20a0a0b9a00572ae3ad68b072']//div[@class='sn-widget-list-content']//div[@class='sn-widget-list-title'][normalize-space()='Homepage']\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"ID\"",
-                "Parameter Value": "\"\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"Name\"",
-                "Parameter Value": "\"\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"Tag Name\"",
-                "Parameter Value": "\"DIV\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"Class Name\"",
-                "Parameter Value": "\"sn-widget-list-title\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"Link Text\"",
-                "Parameter Value": "\"\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"CSS Selector\"",
-                "Parameter Value": "\"a#\\34 aeebcd20a0a0b9a00572ae3ad68b072 > div > div\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"CSS Selector 1\"",
-                "Parameter Value": "\"DIV[class='sn-widget-list-title']\""
-              },
-              {
-                "Enabled": "False",
-                "Parameter Name": "\"CSS Selector 2\"",
-                "Parameter Value": "\"DIV[data-tooltip-overflow-only-text='true']\""
-              }
-            ],
-            "v_Timeout": "30",
-            "v_OutputUserVariableName": "isLoggedIn",
-            "CommandID": "ddcad7c2-ffe8-4f4e-a733-fd4bc8781eaa",
+            "v_OutputUserVariableName": "isBrowserLoaded",
+            "CommandID": "5d493e55-dadd-4c5d-a2a6-83a63c90bdbd",
             "CommandName": "NativeBrowserElementExistsCommand",
             "SelectionName": "Native Browser Element Exists",
-            "LineNumber": 9,
+            "LineNumber": 4,
             "IsCommented": false,
             "PauseBeforeExecution": false,
             "CommandEnabled": true,
@@ -517,15 +157,11 @@
         {
           "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
           "ScriptCommand": {
-            "$type": "OpenBots.Commands.Core.If.BeginIfCommand, OpenBots.Commands.Core",
-            "v_Option": "Inline",
-            "v_Condition": "isLoggedIn",
-            "v_ActionType": null,
-            "v_ActionParameterTable": [],
-            "CommandID": "608a0a37-1b72-40ca-a656-7d4a2e9498d8",
-            "CommandName": "BeginIfCommand",
-            "SelectionName": "If",
-            "LineNumber": 10,
+            "$type": "OpenBots.Commands.Core.ErrorHandling.BeginTryCommand, OpenBots.Commands.Core",
+            "CommandID": "03c52fd0-cd05-43ff-8a43-d7a1e116bbff",
+            "CommandName": "BeginTryCommand",
+            "SelectionName": "Try",
+            "LineNumber": 5,
             "IsCommented": false,
             "PauseBeforeExecution": false,
             "CommandEnabled": true,
@@ -538,32 +174,603 @@
             {
               "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
               "ScriptCommand": {
-                "$type": "OpenBots.Commands.Core.Misc.AddCodeCommentCommand, OpenBots.Commands.Core",
-                "CommandID": "a83422d6-515f-4048-8bfb-eefe2c90e589",
-                "CommandName": "AddCodeCommentCommand",
-                "SelectionName": "Add Code Comment",
-                "LineNumber": 11,
+                "$type": "OpenBots.Commands.Core.ErrorHandling.BeginRetryCommand, OpenBots.Commands.Core",
+                "v_RetryCount": "2",
+                "v_RetryInterval": "0",
+                "v_Option": "Inline",
+                "v_Condition": "isBrowserLoaded",
+                "v_LogicType": "And",
+                "v_IfConditionsTable": [],
+                "CommandID": "60d374ef-b1c4-40f2-a714-3c9108ce16da",
+                "CommandName": "BeginRetryCommand",
+                "SelectionName": "Retry",
+                "LineNumber": 6,
                 "IsCommented": false,
                 "PauseBeforeExecution": false,
                 "CommandEnabled": true,
-                "ScopeStartCommand": false,
+                "ScopeStartCommand": true,
                 "v_IsPrivate": false,
                 "v_ErrorHandling": "None",
-                "v_Comment": "Items in this section will run if the statement is true"
+                "v_Comment": null
               },
-              "AdditionalScriptCommands": null
+              "AdditionalScriptCommands": [
+                {
+                  "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+                  "ScriptCommand": {
+                    "$type": "OpenBots.Commands.Core.Misc.AddCodeCommentCommand, OpenBots.Commands.Core",
+                    "CommandID": "cdb6d8f3-5800-4bb8-8fe5-e4d14b09d2d5",
+                    "CommandName": "AddCodeCommentCommand",
+                    "SelectionName": "Add Code Comment",
+                    "LineNumber": 7,
+                    "IsCommented": false,
+                    "PauseBeforeExecution": false,
+                    "CommandEnabled": true,
+                    "ScopeStartCommand": false,
+                    "v_IsPrivate": false,
+                    "v_ErrorHandling": "None",
+                    "v_Comment": "Items in this section will be retried as long as the condition is not met or an error is thrown"
+                  },
+                  "AdditionalScriptCommands": null
+                },
+                {
+                  "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+                  "ScriptCommand": {
+                    "$type": "OpenBots.Commands.Core.If.BeginIfCommand, OpenBots.Commands.Core",
+                    "v_Option": "Inline",
+                    "v_Condition": "isBrowserLoaded",
+                    "v_ActionType": null,
+                    "v_ActionParameterTable": [],
+                    "CommandID": "3e1d2b68-b5f1-49b4-8f62-574aa9459572",
+                    "CommandName": "BeginIfCommand",
+                    "SelectionName": "If",
+                    "LineNumber": 8,
+                    "IsCommented": false,
+                    "PauseBeforeExecution": true,
+                    "CommandEnabled": true,
+                    "ScopeStartCommand": true,
+                    "v_IsPrivate": false,
+                    "v_ErrorHandling": "None",
+                    "v_Comment": null
+                  },
+                  "AdditionalScriptCommands": [
+                    {
+                      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+                      "ScriptCommand": {
+                        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserSetTextCommand, OpenBots.Commands.UIAutomation",
+                        "v_InstanceName": "BrowserInstance",
+                        "v_NativeSearchParameters": [
+                          {
+                            "Enabled": "True",
+                            "Parameter Name": "\"XPath\"",
+                            "Parameter Value": "\"/html/body/form/div/div[1]/input\""
+                          },
+                          {
+                            "Enabled": null,
+                            "Parameter Name": "\"Relative XPath\"",
+                            "Parameter Value": "\"//input[@id='user_name']\""
+                          },
+                          {
+                            "Enabled": "True",
+                            "Parameter Name": "\"ID\"",
+                            "Parameter Value": "\"user_name\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"Name\"",
+                            "Parameter Value": "\"user_name\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"Tag Name\"",
+                            "Parameter Value": "\"INPUT\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"Class Name\"",
+                            "Parameter Value": "\"form-control\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"Link Text\"",
+                            "Parameter Value": "\"\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"CSS Selector\"",
+                            "Parameter Value": "\"input#user_name\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"CSS Selector 1\"",
+                            "Parameter Value": "\"INPUT[type='text']\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"CSS Selector 2\"",
+                            "Parameter Value": "\"INPUT[class='form-control']\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"CSS Selector 3\"",
+                            "Parameter Value": "\"INPUT[id='user_name']\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"CSS Selector 4\"",
+                            "Parameter Value": "\"INPUT[name='user_name']\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"CSS Selector 5\"",
+                            "Parameter Value": "\"INPUT[autocomplete='off']\""
+                          }
+                        ],
+                        "v_ClearOption": "Yes",
+                        "v_SimulateType": "Yes",
+                        "v_TextToSet": "\"admin\"",
+                        "v_Timeout": "30",
+                        "CommandID": "081333da-0e2c-4df0-8b84-04d790d3cc26",
+                        "CommandName": "NativeBrowserSetTextCommand",
+                        "SelectionName": "Native Browser Set Text",
+                        "LineNumber": 9,
+                        "IsCommented": false,
+                        "PauseBeforeExecution": false,
+                        "CommandEnabled": true,
+                        "ScopeStartCommand": false,
+                        "v_IsPrivate": false,
+                        "v_ErrorHandling": "None",
+                        "v_Comment": null
+                      },
+                      "AdditionalScriptCommands": null
+                    },
+                    {
+                      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+                      "ScriptCommand": {
+                        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserSetTextCommand, OpenBots.Commands.UIAutomation",
+                        "v_InstanceName": "BrowserInstance",
+                        "v_NativeSearchParameters": [
+                          {
+                            "Enabled": "True",
+                            "Parameter Name": "\"XPath\"",
+                            "Parameter Value": "\"/html/body/form/div/div[2]/input[1]\""
+                          },
+                          {
+                            "Enabled": null,
+                            "Parameter Name": "\"Relative XPath\"",
+                            "Parameter Value": "\"\""
+                          },
+                          {
+                            "Enabled": "True",
+                            "Parameter Name": "\"ID\"",
+                            "Parameter Value": "\"user_password\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"Name\"",
+                            "Parameter Value": "\"user_password\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"Tag Name\"",
+                            "Parameter Value": "\"INPUT\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"Class Name\"",
+                            "Parameter Value": "\"form-control\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"Link Text\"",
+                            "Parameter Value": "\"\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"CSS Selector\"",
+                            "Parameter Value": "\"input#user_password\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"CSS Selector 1\"",
+                            "Parameter Value": "\"INPUT[type='password']\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"CSS Selector 2\"",
+                            "Parameter Value": "\"INPUT[id='user_password']\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"CSS Selector 3\"",
+                            "Parameter Value": "\"INPUT[name='user_password']\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"CSS Selector 4\"",
+                            "Parameter Value": "\"INPUT[autocomplete='off']\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"CSS Selector 5\"",
+                            "Parameter Value": "\"INPUT[class='form-control']\""
+                          }
+                        ],
+                        "v_ClearOption": "Yes",
+                        "v_SimulateType": "Yes",
+                        "v_TextToSet": "\"ty8NKDrqfF0C\"",
+                        "v_Timeout": "30",
+                        "CommandID": "630a10aa-dc68-4d07-815e-3a172f7a04d5",
+                        "CommandName": "NativeBrowserSetTextCommand",
+                        "SelectionName": "Native Browser Set Text",
+                        "LineNumber": 10,
+                        "IsCommented": false,
+                        "PauseBeforeExecution": false,
+                        "CommandEnabled": true,
+                        "ScopeStartCommand": false,
+                        "v_IsPrivate": false,
+                        "v_ErrorHandling": "None",
+                        "v_Comment": null
+                      },
+                      "AdditionalScriptCommands": null
+                    },
+                    {
+                      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+                      "ScriptCommand": {
+                        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserClickElementCommand, OpenBots.Commands.UIAutomation",
+                        "v_InstanceName": "BrowserInstance",
+                        "v_NativeSearchParameters": [
+                          {
+                            "Enabled": "True",
+                            "Parameter Name": "\"XPath\"",
+                            "Parameter Value": "\"/html/body/form/div/div[4]/button\""
+                          },
+                          {
+                            "Enabled": null,
+                            "Parameter Name": "\"Relative XPath\"",
+                            "Parameter Value": "\"//button[normalize-space()='Log in']\""
+                          },
+                          {
+                            "Enabled": "True",
+                            "Parameter Name": "\"ID\"",
+                            "Parameter Value": "\"sysverb_login\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"Name\"",
+                            "Parameter Value": "\"not_important\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"Tag Name\"",
+                            "Parameter Value": "\"BUTTON\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"Class Name\"",
+                            "Parameter Value": "\"pull-right btn btn-primary\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"Link Text\"",
+                            "Parameter Value": "\"\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"CSS Selector\"",
+                            "Parameter Value": "\"button#sysverb_login\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"CSS Selector 1\"",
+                            "Parameter Value": "\"BUTTON[name='not_important']\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"CSS Selector 2\"",
+                            "Parameter Value": "\"BUTTON[id='sysverb_login']\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"CSS Selector 3\"",
+                            "Parameter Value": "\"BUTTON[class='pull-right btn btn-primary']\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"CSS Selector 4\"",
+                            "Parameter Value": "\"BUTTON[type='submit']\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"CSS Selector 5\"",
+                            "Parameter Value": "\"BUTTON[onclick='loginPage.sys_action.value=this.id;']\""
+                          }
+                        ],
+                        "v_ClickButton": "Left",
+                        "v_ClickType": "Mouse Click",
+                        "v_OpenLinkOptions": "Same Tab",
+                        "v_NewInstanceName": null,
+                        "v_XAdjustment": "0",
+                        "v_YAdjustment": "0",
+                        "v_Timeout": "30",
+                        "CommandID": "9b30ecb4-488d-4d11-b74d-e25a47cf3abc",
+                        "CommandName": "NativeBrowserClickElementCommand",
+                        "SelectionName": "Native Browser Click Element",
+                        "LineNumber": 11,
+                        "IsCommented": false,
+                        "PauseBeforeExecution": false,
+                        "CommandEnabled": true,
+                        "ScopeStartCommand": false,
+                        "v_IsPrivate": false,
+                        "v_ErrorHandling": "None",
+                        "v_Comment": null
+                      },
+                      "AdditionalScriptCommands": null
+                    },
+                    {
+                      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+                      "ScriptCommand": {
+                        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserElementExistsCommand, OpenBots.Commands.UIAutomation",
+                        "v_InstanceName": "BrowserInstance",
+                        "v_NativeSearchParameters": [
+                          {
+                            "Enabled": "True",
+                            "Parameter Name": "\"XPath\"",
+                            "Parameter Value": "\"/html/body/div[5]/div/div/nav/div/div[3]/div/div/concourse-application-tree/ul/li[1]/ul/li[1]/div/div/a/div/div\""
+                          },
+                          {
+                            "Enabled": null,
+                            "Parameter Name": "\"Relative XPath\"",
+                            "Parameter Value": "\"//a[@id='4aeebcd20a0a0b9a00572ae3ad68b072']//div[@class='sn-widget-list-content']//div[@class='sn-widget-list-title'][normalize-space()='Homepage']\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"ID\"",
+                            "Parameter Value": "\"\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"Name\"",
+                            "Parameter Value": "\"\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"Tag Name\"",
+                            "Parameter Value": "\"DIV\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"Class Name\"",
+                            "Parameter Value": "\"sn-widget-list-title\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"Link Text\"",
+                            "Parameter Value": "\"\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"CSS Selector\"",
+                            "Parameter Value": "\"a#\\34 aeebcd20a0a0b9a00572ae3ad68b072 > div > div\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"CSS Selector 1\"",
+                            "Parameter Value": "\"DIV[class='sn-widget-list-title']\""
+                          },
+                          {
+                            "Enabled": "False",
+                            "Parameter Name": "\"CSS Selector 2\"",
+                            "Parameter Value": "\"DIV[data-tooltip-overflow-only-text='true']\""
+                          }
+                        ],
+                        "v_Timeout": "30",
+                        "v_OutputUserVariableName": "isLoggedIn",
+                        "CommandID": "ddcad7c2-ffe8-4f4e-a733-fd4bc8781eaa",
+                        "CommandName": "NativeBrowserElementExistsCommand",
+                        "SelectionName": "Native Browser Element Exists",
+                        "LineNumber": 12,
+                        "IsCommented": false,
+                        "PauseBeforeExecution": false,
+                        "CommandEnabled": true,
+                        "ScopeStartCommand": false,
+                        "v_IsPrivate": false,
+                        "v_ErrorHandling": "None",
+                        "v_Comment": null
+                      },
+                      "AdditionalScriptCommands": null
+                    },
+                    {
+                      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+                      "ScriptCommand": {
+                        "$type": "OpenBots.Commands.Core.If.BeginIfCommand, OpenBots.Commands.Core",
+                        "v_Option": "Inline",
+                        "v_Condition": "isLoggedIn",
+                        "v_ActionType": null,
+                        "v_ActionParameterTable": [],
+                        "CommandID": "608a0a37-1b72-40ca-a656-7d4a2e9498d8",
+                        "CommandName": "BeginIfCommand",
+                        "SelectionName": "If",
+                        "LineNumber": 13,
+                        "IsCommented": false,
+                        "PauseBeforeExecution": false,
+                        "CommandEnabled": true,
+                        "ScopeStartCommand": true,
+                        "v_IsPrivate": false,
+                        "v_ErrorHandling": "None",
+                        "v_Comment": null
+                      },
+                      "AdditionalScriptCommands": [
+                        {
+                          "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+                          "ScriptCommand": {
+                            "$type": "OpenBots.Commands.Core.Engine.LogMessageCommand, OpenBots.Commands.Core",
+                            "v_LogFile": "\"Engine Logs\"",
+                            "v_LogText": "\"Login success\"",
+                            "v_LogType": "Information",
+                            "CommandID": "ee7d25cf-726e-4f1e-bf9f-352ba0df1290",
+                            "CommandName": "LogMessageCommand",
+                            "SelectionName": "Log Message",
+                            "LineNumber": 14,
+                            "IsCommented": false,
+                            "PauseBeforeExecution": false,
+                            "CommandEnabled": true,
+                            "ScopeStartCommand": false,
+                            "v_IsPrivate": false,
+                            "v_ErrorHandling": "None",
+                            "v_Comment": null
+                          },
+                          "AdditionalScriptCommands": null
+                        },
+                        {
+                          "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+                          "ScriptCommand": {
+                            "$type": "OpenBots.Commands.Core.If.ElseCommand, OpenBots.Commands.Core",
+                            "CommandID": "52d41034-9b77-4837-984f-959933041385",
+                            "CommandName": "ElseCommand",
+                            "SelectionName": "Else",
+                            "LineNumber": 15,
+                            "IsCommented": false,
+                            "PauseBeforeExecution": false,
+                            "CommandEnabled": true,
+                            "ScopeStartCommand": false,
+                            "v_IsPrivate": false,
+                            "v_ErrorHandling": "None",
+                            "v_Comment": null
+                          },
+                          "AdditionalScriptCommands": null
+                        },
+                        {
+                          "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+                          "ScriptCommand": {
+                            "$type": "OpenBots.Commands.Core.Engine.LogMessageCommand, OpenBots.Commands.Core",
+                            "v_LogFile": "\"Engine Logs\"",
+                            "v_LogText": "\"Login unsuccessful\"",
+                            "v_LogType": "Information",
+                            "CommandID": "6a64346f-98d4-4048-8bdf-c178706e42c1",
+                            "CommandName": "LogMessageCommand",
+                            "SelectionName": "Log Message",
+                            "LineNumber": 16,
+                            "IsCommented": false,
+                            "PauseBeforeExecution": false,
+                            "CommandEnabled": true,
+                            "ScopeStartCommand": false,
+                            "v_IsPrivate": false,
+                            "v_ErrorHandling": "None",
+                            "v_Comment": null
+                          },
+                          "AdditionalScriptCommands": null
+                        },
+                        {
+                          "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+                          "ScriptCommand": {
+                            "$type": "OpenBots.Commands.Core.If.EndIfCommand, OpenBots.Commands.Core",
+                            "IfType": "If",
+                            "CommandID": "6bebba93-7908-4317-ad08-8baf69ba7805",
+                            "CommandName": "EndIfCommand",
+                            "SelectionName": "End If",
+                            "LineNumber": 17,
+                            "IsCommented": false,
+                            "PauseBeforeExecution": false,
+                            "CommandEnabled": true,
+                            "ScopeStartCommand": false,
+                            "v_IsPrivate": false,
+                            "v_ErrorHandling": "None",
+                            "v_Comment": null
+                          },
+                          "AdditionalScriptCommands": null
+                        }
+                      ]
+                    },
+                    {
+                      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+                      "ScriptCommand": {
+                        "$type": "OpenBots.Commands.Core.If.ElseCommand, OpenBots.Commands.Core",
+                        "CommandID": "6b2d88e5-5ca4-43b2-b89a-a93ffd2f73b9",
+                        "CommandName": "ElseCommand",
+                        "SelectionName": "Else",
+                        "LineNumber": 18,
+                        "IsCommented": false,
+                        "PauseBeforeExecution": false,
+                        "CommandEnabled": true,
+                        "ScopeStartCommand": false,
+                        "v_IsPrivate": false,
+                        "v_ErrorHandling": "None",
+                        "v_Comment": null
+                      },
+                      "AdditionalScriptCommands": null
+                    },
+                    {
+                      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+                      "ScriptCommand": {
+                        "$type": "OpenBots.Commands.Core.Engine.LogMessageCommand, OpenBots.Commands.Core",
+                        "v_LogFile": "\"Engine Logs\"",
+                        "v_LogText": "\"Not able to load Servienow\"",
+                        "v_LogType": "Information",
+                        "CommandID": "54df342f-b792-4a29-98b5-57a5366559a4",
+                        "CommandName": "LogMessageCommand",
+                        "SelectionName": "Log Message",
+                        "LineNumber": 19,
+                        "IsCommented": false,
+                        "PauseBeforeExecution": false,
+                        "CommandEnabled": true,
+                        "ScopeStartCommand": false,
+                        "v_IsPrivate": false,
+                        "v_ErrorHandling": "None",
+                        "v_Comment": null
+                      },
+                      "AdditionalScriptCommands": null
+                    },
+                    {
+                      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+                      "ScriptCommand": {
+                        "$type": "OpenBots.Commands.Core.If.EndIfCommand, OpenBots.Commands.Core",
+                        "IfType": "If",
+                        "CommandID": "8f43419e-5305-4e7e-b89a-4e92a019c746",
+                        "CommandName": "EndIfCommand",
+                        "SelectionName": "End If",
+                        "LineNumber": 20,
+                        "IsCommented": false,
+                        "PauseBeforeExecution": false,
+                        "CommandEnabled": true,
+                        "ScopeStartCommand": false,
+                        "v_IsPrivate": false,
+                        "v_ErrorHandling": "None",
+                        "v_Comment": null
+                      },
+                      "AdditionalScriptCommands": null
+                    }
+                  ]
+                },
+                {
+                  "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+                  "ScriptCommand": {
+                    "$type": "OpenBots.Commands.Core.ErrorHandling.EndTryCommand, OpenBots.Commands.Core",
+                    "TryType": "Retry",
+                    "CommandID": "94c595cc-4572-4a6c-bbc2-510393964ab5",
+                    "CommandName": "EndTryCommand",
+                    "SelectionName": "End Try",
+                    "LineNumber": 21,
+                    "IsCommented": false,
+                    "PauseBeforeExecution": false,
+                    "CommandEnabled": true,
+                    "ScopeStartCommand": false,
+                    "v_IsPrivate": false,
+                    "v_ErrorHandling": "None",
+                    "v_Comment": null
+                  },
+                  "AdditionalScriptCommands": null
+                }
+              ]
             },
             {
               "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
               "ScriptCommand": {
-                "$type": "OpenBots.Commands.Core.Engine.LogMessageCommand, OpenBots.Commands.Core",
-                "v_LogFile": "\"Engine Logs\"",
-                "v_LogText": "\"Login success\"",
-                "v_LogType": "Information",
-                "CommandID": "ee7d25cf-726e-4f1e-bf9f-352ba0df1290",
-                "CommandName": "LogMessageCommand",
-                "SelectionName": "Log Message",
-                "LineNumber": 12,
+                "$type": "OpenBots.Commands.Core.ErrorHandling.CatchCommand, OpenBots.Commands.Core",
+                "v_ExceptionType": "Exception",
+                "CommandID": "da53a3f9-9fb2-4e4c-8c9c-1c3688836b83",
+                "CommandName": "CatchCommand",
+                "SelectionName": "Catch",
+                "LineNumber": 22,
                 "IsCommented": false,
                 "PauseBeforeExecution": false,
                 "CommandEnabled": true,
@@ -577,32 +784,13 @@
             {
               "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
               "ScriptCommand": {
-                "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Browser.NativeBrowserNavigateToURLCommand, OpenBots.Commands.UIAutomation",
-                "v_InstanceName": "BrowserInstance",
-                "v_URL": "\"https://dev93682.service-now.com/nav_to.do?uri=%2Fsys_app_module.do%3Fsys_id%3D087800c1c0a80164004e32c8a64a97c9\"",
-                "v_Timeout": "30",
-                "CommandID": "bc9bcbe8-e15d-4390-8379-93135113c2a4",
-                "CommandName": "NativeBrowserNavigateToURLCommand",
-                "SelectionName": "Native Browser Navigate To URL",
-                "LineNumber": 13,
-                "IsCommented": true,
-                "PauseBeforeExecution": false,
-                "CommandEnabled": true,
-                "ScopeStartCommand": false,
-                "v_IsPrivate": false,
-                "v_ErrorHandling": "None",
-                "v_Comment": null
-              },
-              "AdditionalScriptCommands": null
-            },
-            {
-              "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
-              "ScriptCommand": {
-                "$type": "OpenBots.Commands.Core.If.ElseCommand, OpenBots.Commands.Core",
-                "CommandID": "52d41034-9b77-4837-984f-959933041385",
-                "CommandName": "ElseCommand",
-                "SelectionName": "Else",
-                "LineNumber": 14,
+                "$type": "OpenBots.Commands.Core.ErrorHandling.ThrowCommand, OpenBots.Commands.Core",
+                "v_ExceptionType": "Exception",
+                "v_ExceptionMessage": "\"Exception Occured during login\"",
+                "CommandID": "93465720-a6c9-4b6e-98d6-35720a68fe97",
+                "CommandName": "ThrowCommand",
+                "SelectionName": "Throw",
+                "LineNumber": 23,
                 "IsCommented": false,
                 "PauseBeforeExecution": false,
                 "CommandEnabled": true,
@@ -616,33 +804,12 @@
             {
               "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
               "ScriptCommand": {
-                "$type": "OpenBots.Commands.Core.Engine.LogMessageCommand, OpenBots.Commands.Core",
-                "v_LogFile": "\"Engine Logs\"",
-                "v_LogText": "\"Login unsuccessful\"",
-                "v_LogType": "Information",
-                "CommandID": "6a64346f-98d4-4048-8bdf-c178706e42c1",
-                "CommandName": "LogMessageCommand",
-                "SelectionName": "Log Message",
-                "LineNumber": 15,
-                "IsCommented": false,
-                "PauseBeforeExecution": false,
-                "CommandEnabled": true,
-                "ScopeStartCommand": false,
-                "v_IsPrivate": false,
-                "v_ErrorHandling": "None",
-                "v_Comment": null
-              },
-              "AdditionalScriptCommands": null
-            },
-            {
-              "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
-              "ScriptCommand": {
-                "$type": "OpenBots.Commands.Core.If.EndIfCommand, OpenBots.Commands.Core",
-                "IfType": "If",
-                "CommandID": "6bebba93-7908-4317-ad08-8baf69ba7805",
-                "CommandName": "EndIfCommand",
-                "SelectionName": "End If",
-                "LineNumber": 16,
+                "$type": "OpenBots.Commands.Core.ErrorHandling.EndTryCommand, OpenBots.Commands.Core",
+                "TryType": "Try",
+                "CommandID": "da553d1e-b842-4e91-8043-56b24ee778d3",
+                "CommandName": "EndTryCommand",
+                "SelectionName": "End Try",
+                "LineNumber": 24,
                 "IsCommented": false,
                 "PauseBeforeExecution": false,
                 "CommandEnabled": true,
@@ -658,56 +825,12 @@
         {
           "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
           "ScriptCommand": {
-            "$type": "OpenBots.Commands.Core.If.EndIfCommand, OpenBots.Commands.Core",
-            "IfType": "If",
-            "CommandID": "8f43419e-5305-4e7e-b89a-4e92a019c746",
-            "CommandName": "EndIfCommand",
-            "SelectionName": "End If",
-            "LineNumber": 17,
-            "IsCommented": false,
-            "PauseBeforeExecution": false,
-            "CommandEnabled": true,
-            "ScopeStartCommand": false,
-            "v_IsPrivate": false,
-            "v_ErrorHandling": "None",
-            "v_Comment": null
-          },
-          "AdditionalScriptCommands": null
-        }
-      ]
-    },
-    {
-      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
-      "ScriptCommand": {
-        "$type": "OpenBots.Commands.Core.ErrorHandling.BeginRetryCommand, OpenBots.Commands.Core",
-        "v_RetryCount": "2",
-        "v_RetryInterval": "10",
-        "v_Option": "Inline",
-        "v_Condition": "isLoggedIn",
-        "v_LogicType": "And",
-        "v_IfConditionsTable": [],
-        "CommandID": "acb536f7-01e3-4cbb-891b-f998062c75df",
-        "CommandName": "BeginRetryCommand",
-        "SelectionName": "Retry",
-        "LineNumber": 18,
-        "IsCommented": false,
-        "PauseBeforeExecution": false,
-        "CommandEnabled": true,
-        "ScopeStartCommand": true,
-        "v_IsPrivate": false,
-        "v_ErrorHandling": "None",
-        "v_Comment": null
-      },
-      "AdditionalScriptCommands": [
-        {
-          "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
-          "ScriptCommand": {
             "$type": "OpenBots.Commands.Core.ErrorHandling.EndTryCommand, OpenBots.Commands.Core",
             "TryType": "Retry",
             "CommandID": "fa5b7aab-54e1-4ee8-bef1-9212eba5aa99",
             "CommandName": "EndTryCommand",
             "SelectionName": "End Try",
-            "LineNumber": 19,
+            "LineNumber": 25,
             "IsCommented": false,
             "PauseBeforeExecution": false,
             "CommandEnabled": true,
@@ -747,7 +870,16 @@
       "VariableValue": "\"Value Provided at Runtime\""
     }
   ],
-  "Arguments": [],
+  "Arguments": [
+    {
+      "$type": "OpenBots.Core.Script.ScriptArgument, OpenBots.Core",
+      "ArgumentName": "out_BrowserInstance",
+      "ArgumentType": "OpenBots.Core.Model.ApplicationModel.OBAppInstance, OpenBots.Core, Version=1.6.1.0, Culture=neutral, PublicKeyToken=null",
+      "ArgumentValue": null,
+      "Direction": 1,
+      "AssignedVariable": null
+    }
+  ],
   "Elements": [],
   "ImportedNamespaces": {
     "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.List`1[[OpenBots.Core.Script.AssemblyReference, OpenBots.Core]], mscorlib]], mscorlib",

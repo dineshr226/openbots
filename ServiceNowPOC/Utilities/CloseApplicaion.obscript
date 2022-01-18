@@ -1,0 +1,501 @@
+{
+  "$type": "OpenBots.Core.Script.Script, OpenBots.Core",
+  "Commands": [
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserClickElementCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "in_BrowserInstance",
+        "v_NativeSearchParameters": [
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"XPath\"",
+            "Parameter Value": "\"/html/body/div[5]/div/div/nav/div/div[3]/div/div/concourse-application-tree/ul/li[1]/ul/li[10]/div/div/a/div/div\""
+          },
+          {
+            "Enabled": null,
+            "Parameter Name": "\"Relative XPath\"",
+            "Parameter Value": "\"//div[normalize-space()='Incidents']//a[@id='087800c1c0a80164004e32c8a64a97c9']//div[@class='sn-widget-list-content']//div[@class='sn-widget-list-title'][normalize-space()='Incidents']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"ID\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Name\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Tag Name\"",
+            "Parameter Value": "\"DIV\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Class Name\"",
+            "Parameter Value": "\"sn-widget-list-title\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Link Text\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector\"",
+            "Parameter Value": "\"a#\\30 87800c1c0a80164004e32c8a64a97c9 > div > div\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 1\"",
+            "Parameter Value": "\"DIV[class='sn-widget-list-title']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 2\"",
+            "Parameter Value": "\"DIV[data-tooltip-overflow-only-text='true']\""
+          }
+        ],
+        "v_ClickButton": "Left",
+        "v_ClickType": "Mouse Click",
+        "v_OpenLinkOptions": "Same Tab",
+        "v_NewInstanceName": null,
+        "v_XAdjustment": "0",
+        "v_YAdjustment": "0",
+        "v_Timeout": "30",
+        "CommandID": "823d76c6-540b-45d4-9746-3ce172c15e3a",
+        "CommandName": "NativeBrowserClickElementCommand",
+        "SelectionName": "Native Browser Click Element",
+        "LineNumber": 1,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.Input.SendAdvancedKeystrokesCommand, OpenBots.Commands.UIAutomation",
+        "v_WindowName": "\"Current Window\"",
+        "v_KeyActions": [
+          {
+            "Key": "Shift [ShiftKey]",
+            "Action": "Key Press (Down + Up)"
+          },
+          {
+            "Key": "Tab [Tab]",
+            "Action": null
+          }
+        ],
+        "v_KeyUpDefault": "Yes",
+        "CommandID": "6bb6cf43-4b9d-4259-a00b-68e2c2a6d57b",
+        "CommandName": "SendAdvancedKeystrokesCommand",
+        "SelectionName": "Send Advanced Keystrokes",
+        "LineNumber": 2,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.Input.SendAdvancedKeystrokesCommand, OpenBots.Commands.UIAutomation",
+        "v_WindowName": "\"Current Window\"",
+        "v_KeyActions": [
+          {
+            "Key": "Shift [ShiftKey]",
+            "Action": "Key Press (Down + Up)"
+          },
+          {
+            "Key": "Tab [Tab]",
+            "Action": null
+          }
+        ],
+        "v_KeyUpDefault": "Yes",
+        "CommandID": "7f33c78e-0b51-4489-b08b-180d796544c4",
+        "CommandName": "SendAdvancedKeystrokesCommand",
+        "SelectionName": "Send Advanced Keystrokes",
+        "LineNumber": 3,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.Input.SendAdvancedKeystrokesCommand, OpenBots.Commands.UIAutomation",
+        "v_WindowName": "\"Current Window\"",
+        "v_KeyActions": [
+          {
+            "Key": "Enter [Return]",
+            "Action": "Key Press (Down + Up)"
+          }
+        ],
+        "v_KeyUpDefault": "Yes",
+        "CommandID": "9145023a-1c32-4d95-ba32-0e550847febd",
+        "CommandName": "SendAdvancedKeystrokesCommand",
+        "SelectionName": "Send Advanced Keystrokes",
+        "LineNumber": 4,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.Window.CloseWindowCommand, OpenBots.Commands.UIAutomation",
+        "v_WindowName": "\"Current Window\"",
+        "v_Timeout": "30",
+        "CommandID": "54db2079-966b-4240-ac94-91990256be1f",
+        "CommandName": "CloseWindowCommand",
+        "SelectionName": "Close Window",
+        "LineNumber": 5,
+        "IsCommented": true,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.NativeBrowserAttachApplicationCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "BrowserInstance",
+        "v_EngineType": "Chrome",
+        "v_TabTitle": "\"Incidents [Self Service view] | ServiceNow\"",
+        "v_Timeout": "30",
+        "CommandID": "b4e05fa0-949e-4ffa-99fc-c97f7c0b1fad",
+        "CommandName": "NativeBrowserAttachApplicationCommand",
+        "SelectionName": "Native Browser Attach Application",
+        "LineNumber": 6,
+        "IsCommented": true,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.Misc.ShowMessageCommand, OpenBots.Commands.Core",
+        "v_Message": "\"New\"",
+        "v_AutoCloseAfter": "0",
+        "CommandID": "f18e9803-283f-488d-8f67-62e9d990ffbd",
+        "CommandName": "ShowMessageCommand",
+        "SelectionName": "Show Message",
+        "LineNumber": 7,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.UIAutomation.NativeBrowser.Element.NativeBrowserSetTextCommand, OpenBots.Commands.UIAutomation",
+        "v_InstanceName": "in_BrowserInstance",
+        "v_NativeSearchParameters": [
+          {
+            "Enabled": "True",
+            "Parameter Name": "\"XPath\"",
+            "Parameter Value": "\"/html/body/div[2]/form/span[1]/span/div[5]/div[2]/div/div[1]/div[2]/input[3]\""
+          },
+          {
+            "Enabled": null,
+            "Parameter Name": "\"Relative XPath\"",
+            "Parameter Value": "\"//input[@id='incident.short_description']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"ID\"",
+            "Parameter Value": "\"incident.short_description\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Name\"",
+            "Parameter Value": "\"incident.short_description\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Tag Name\"",
+            "Parameter Value": "\"INPUT\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Class Name\"",
+            "Parameter Value": "\"form-control\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"Link Text\"",
+            "Parameter Value": "\"\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector\"",
+            "Parameter Value": "\"input#incident\\2e short_description\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 1\"",
+            "Parameter Value": "\"INPUT[id='incident.short_description']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 2\"",
+            "Parameter Value": "\"INPUT[name='incident.short_description']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 3\"",
+            "Parameter Value": "\"INPUT[autocomplete='off']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 4\"",
+            "Parameter Value": "\"INPUT[maxlength='160']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 5\"",
+            "Parameter Value": "\"INPUT[data-type='pick_list']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 6\"",
+            "Parameter Value": "\"INPUT[data-ref='incident.short_description']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 7\"",
+            "Parameter Value": "\"INPUT[data-dependent='null']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 8\"",
+            "Parameter Value": "\"INPUT[onchange='onChange('incident.short_description');']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 9\"",
+            "Parameter Value": "\"INPUT[aria-required='true']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 10\"",
+            "Parameter Value": "\"INPUT[class='form-control']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 11\"",
+            "Parameter Value": "\"INPUT[mandatory='true']\""
+          },
+          {
+            "Enabled": "False",
+            "Parameter Name": "\"CSS Selector 12\"",
+            "Parameter Value": "\"INPUT[aria-label='Short description']\""
+          }
+        ],
+        "v_ClearOption": "Yes",
+        "v_SimulateType": "No",
+        "v_TextToSet": "\"Tesyt\"",
+        "v_Timeout": "30",
+        "CommandID": "a676c2fa-1f91-4498-95b9-f8a765b851f1",
+        "CommandName": "NativeBrowserSetTextCommand",
+        "SelectionName": "Native Browser Set Text",
+        "LineNumber": 8,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptAction, OpenBots.Core",
+      "ScriptCommand": {
+        "$type": "OpenBots.Commands.Core.Misc.ShowMessageCommand, OpenBots.Commands.Core",
+        "v_Message": "\"New\"",
+        "v_AutoCloseAfter": "0",
+        "CommandID": "3f6c0a91-d982-483c-95c3-d03c14922e1f",
+        "CommandName": "ShowMessageCommand",
+        "SelectionName": "Show Message",
+        "LineNumber": 9,
+        "IsCommented": false,
+        "PauseBeforeExecution": false,
+        "CommandEnabled": true,
+        "ScopeStartCommand": false,
+        "v_IsPrivate": false,
+        "v_ErrorHandling": "None",
+        "v_Comment": null
+      },
+      "AdditionalScriptCommands": null
+    }
+  ],
+  "Variables": [
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "BrowserInstance",
+      "VariableType": "OpenBots.Core.Model.ApplicationModel.OBAppInstance, OpenBots.Core, Version=1.6.1.0, Culture=neutral, PublicKeyToken=null",
+      "VariableValue": ""
+    },
+    {
+      "$type": "OpenBots.Core.Script.ScriptVariable, OpenBots.Core",
+      "VariableName": "ProjectPath",
+      "VariableType": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "VariableValue": "\"Value Provided at Runtime\""
+    }
+  ],
+  "Arguments": [
+    {
+      "$type": "OpenBots.Core.Script.ScriptArgument, OpenBots.Core",
+      "ArgumentName": "in_BrowserInstance",
+      "ArgumentType": "OpenBots.Core.Model.ApplicationModel.OBAppInstance, OpenBots.Core, Version=1.6.1.0, Culture=neutral, PublicKeyToken=null",
+      "ArgumentValue": null,
+      "Direction": 0,
+      "AssignedVariable": null
+    }
+  ],
+  "Elements": [],
+  "ImportedNamespaces": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.List`1[[OpenBots.Core.Script.AssemblyReference, OpenBots.Core]], mscorlib]], mscorlib",
+    "Microsoft.Office.Interop.Outlook": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "Microsoft.Office.Interop.Outlook",
+        "AssemblyVersion": "15.0.0.0"
+      }
+    ],
+    "MimeKit": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "MimeKit",
+        "AssemblyVersion": "2.14.0.0"
+      }
+    ],
+    "OpenBots.Core.Model.ApplicationModel": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "OpenBots.Core",
+        "AssemblyVersion": "1.6.1.0"
+      }
+    ],
+    "System": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Collections.Generic": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Data": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Data",
+        "AssemblyVersion": "4.0.0.0"
+      },
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Data.DataSetExtensions",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Drawing": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Drawing",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Linq": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Core",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Security": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Text": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Text.RegularExpressions": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Threading.Tasks": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "mscorlib",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ],
+    "System.Windows.Forms": [
+      {
+        "$type": "OpenBots.Core.Script.AssemblyReference, OpenBots.Core",
+        "AssemblyName": "System.Windows.Forms",
+        "AssemblyVersion": "4.0.0.0"
+      }
+    ]
+  },
+  "Version": "1.6.1.0"
+}
